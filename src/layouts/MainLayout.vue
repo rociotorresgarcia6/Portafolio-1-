@@ -1,25 +1,22 @@
 <script setup lang="ts">
-import { RouterLink, RouterView, useRoute } from 'vue-router'
-
-const route = useRoute()
-
-const isActive = (path: string) => {
-  if (path === '/') return route.path === '/'
-  return route.path.startsWith(path)
-}
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
   <div class="min-h-screen bg-white text-black">
     <header class="sticky top-0 z-20 border-b border-black/10 bg-white/95 backdrop-blur">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-        <RouterLink to="/" class="font-body text-lg font-medium tracking-[0.08em] lowercase">rocío torres</RouterLink>
-        <ul class="flex items-center gap-5 text-xs uppercase tracking-[0.14em] whitespace-nowrap">
+      <nav class="flex items-center justify-between px-3 py-4 sm:px-4">
+        <RouterLink to="/" class="brand-link">rochos</RouterLink>
+
+        <ul class="flex items-center gap-6 whitespace-nowrap">
           <li>
-            <RouterLink to="/" :class="isActive('/') ? 'border-b border-black pb-1' : 'text-black/60 hover:text-black'">Home</RouterLink>
+            <RouterLink to="/projects" class="menu-link">projects</RouterLink>
           </li>
           <li>
-            <RouterLink to="/contacto" :class="isActive('/contacto') ? 'border-b border-black pb-1' : 'text-black/60 hover:text-black'">Contact</RouterLink>
+            <RouterLink to="/about" class="menu-link">about</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/contact" class="menu-link">contact</RouterLink>
           </li>
         </ul>
       </nav>
@@ -30,3 +27,27 @@ const isActive = (path: string) => {
     </main>
   </div>
 </template>
+
+<style scoped>
+.brand-link {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+  line-height: 0.9;
+  text-transform: lowercase;
+  color: #fb1200;
+}
+
+.menu-link {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 1.55rem;
+  line-height: 1;
+  color: #000000;
+  text-decoration: none;
+}
+
+.menu-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+</style>

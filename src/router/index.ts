@@ -1,6 +1,8 @@
-import Home from '@/pages/home/Home.vue'
 import MainLayout from '@/layouts/MainLayout.vue'
+import AboutPage from '@/pages/about/AboutPage.vue'
 import ContactoPage from '@/pages/contacto/ContactoPage.vue'
+import Home from '@/pages/home/Home.vue'
+import ProjectsPage from '@/pages/projects/ProjectsPage.vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 export const router = createRouter({
@@ -16,9 +18,23 @@ export const router = createRouter({
           component: Home,
         },
         {
-          path: 'contacto',
-          name: 'contacto',
+          path: 'projects',
+          name: 'projects',
+          component: ProjectsPage,
+        },
+        {
+          path: 'about',
+          name: 'about',
+          component: AboutPage,
+        },
+        {
+          path: 'contact',
+          name: 'contact',
           component: ContactoPage,
+        },
+        {
+          path: 'contacto',
+          redirect: '/contact',
         },
       ],
     },
