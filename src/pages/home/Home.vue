@@ -239,6 +239,8 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: column;
   scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
 }
 
 .title-block {
@@ -247,6 +249,8 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: center;
   padding: 1.5rem 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .title-wrap {
@@ -280,6 +284,8 @@ onBeforeUnmount(() => {
   overflow: hidden;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 5;
 }
 
 .ticker-track {

@@ -7,6 +7,7 @@ import ProjectsPage from '@/pages/projects/ProjectsPage.vue'
 import TypographyMagazinePage from '@/pages/projects/TypographyMagazinePage.vue'
 import PhotographyPage from '@/pages/photography/PhotographyPage.vue'
 import PostersPage from '@/pages/posters/PostersPage.vue'
+import ProjectDetailPage from '@/pages/detalle/ProjectDetailPage.vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 export const router = createRouter({
@@ -45,6 +46,11 @@ export const router = createRouter({
           path: 'projects/typography-magazine',
           name: 'projects-typography-magazine',
           component: TypographyMagazinePage,
+        },
+        {
+          path: 'projects/:id',
+          name: 'project-detail',
+          component: ProjectDetailPage,
         },
         {
           path: 'about',

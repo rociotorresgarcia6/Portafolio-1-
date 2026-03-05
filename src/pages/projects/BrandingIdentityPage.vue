@@ -1,5 +1,14 @@
+<script setup lang="ts">
+import ProjectGrid from '@/components/portfolio/ProjectGrid.vue'
+import { projectsByCategory } from '@/data/projects'
+
+const items = projectsByCategory('branding-identity')
+</script>
+
 <template>
-  <section class="min-h-[calc(100vh-90px)] px-4 py-10 sm:min-h-[calc(100vh-73px)] sm:px-6">
-    <h1 class="font-display text-3xl uppercase tracking-[0.1em] sm:text-5xl">Branding and identity projects</h1>
-  </section>
+  <ProjectGrid
+    title="Branding and Identity"
+    description="Identidades visuales y sistemas de marca con aplicaciones reales."
+    :items="items"
+  />
 </template>

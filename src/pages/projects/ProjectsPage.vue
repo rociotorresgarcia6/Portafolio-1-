@@ -1,22 +1,48 @@
 <script setup lang="ts">
+import { projectCategories } from '@/data/projects'
 import { RouterLink } from 'vue-router'
+
+const folderVisuals: Record<string, { image: string; hoverColor: string; label?: string }> = {
+  photography: {
+    image: '/images/Carpetaazul .png',
+    hoverColor: '#0d5cff',
+    label: 'Photograpy',
+  },
+  posters: {
+    image: '/images/Carpetaamarilla .png',
+    hoverColor: '#d5a900',
+  },
+  'branding-identity': {
+    image: '/images/Carpetaroja .png',
+    hoverColor: '#d0342c',
+  },
+  'typography-magazine': {
+    image: '/images/Carpetaazul .png',
+    hoverColor: '#0d5cff',
+  },
+}
 </script>
 
 <template>
-  <section class="projects-page min-h-[calc(100vh-90px)] px-3 py-2 sm:min-h-[calc(100vh-73px)] sm:px-4 sm:py-3">
-    <div class="projects-list">
-      <RouterLink to="/projects/photography" class="project-card">
-        <p>Photography</p>
-      </RouterLink>
-      <RouterLink to="/projects/posters" class="project-card">
-        <p>Posters</p>
-      </RouterLink>
-      <RouterLink to="/projects/branding-identity" class="project-card">
-        <p>Brandign and identity projects</p>
-      </RouterLink>
-      <RouterLink to="/projects/typography-magazine" class="project-card">
-        <p>Tipography and magazine works</p>
-      </RouterLink>
+  <section class="projects-page min-h-[calc(100vh-90px)] px-3 py-5 sm:min-h-[calc(100vh-73px)] sm:px-4 sm:py-6">
+    <div class="mx-auto w-full max-w-6xl">
+      <div class="folders-grid" role="list" aria-label="Categorias de proyectos">
+        <RouterLink
+          v-for="category in projectCategories"
+          :key="category.id"
+          :to="category.path"
+          class="folder-card"
+          role="listitem"
+          :style="{ '--folder-hover': folderVisuals[category.id]?.hoverColor ?? '#000000' }"
+        >
+          <img
+            class="folder-image"
+            :src="folderVisuals[category.id]?.image ?? '/images/Carpetaazul .png'"
+            :alt="`Carpeta de ${category.title}`"
+          />
+          <p class="folder-label tk-eurostile-extended">{{ folderVisuals[category.id]?.label ?? category.title }}</p>
+        </RouterLink>
+      </div>
     </div>
   </section>
 </template>
@@ -26,36 +52,50 @@ import { RouterLink } from 'vue-router'
   background: #ffffff;
 }
 
-.projects-list {
+.folders-grid {
   display: grid;
-  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.8vw, 2rem);
+  align-items: start;
+  justify-items: start;
 }
 
-.project-card {
-  border: 1px solid #000000;
-  background: #ffffff;
-  min-height: clamp(56px, 6.2vw, 72px);
-  display: flex;
-  align-items: center;
-  padding: 0.8rem 1.15rem;
-  cursor: pointer;
+.folder-card {
+  --folder-hover: #000000;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
   text-decoration: none;
-  transition: background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease;
 }
 
-.project-card p {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-style: italic;
-  font-size: clamp(1rem, 1.7vw, 1.95rem);
+.folder-image {
+  width: clamp(150px, 24vw, 255px);
+  height: auto;
+  transform-origin: center;
+  transition: transform 0.18s ease;
+}
+
+.folder-label {
+  margin: 0;
   color: #000000;
+  font-family: 'eurostile-extended', sans-serif;
+  font-size: clamp(1.05rem, 1.65vw, 1.7rem);
+  letter-spacing: 0.01em;
+  transition: color 0.18s ease;
 }
 
-.project-card:hover {
-  background: #fb1200;
-  border-color: transparent;
+.folder-card:hover .folder-image {
+  transform: scale(1.08);
 }
 
-.project-card:hover p {
-  color: #ffffff;
+.folder-card:hover .folder-label {
+  color: var(--folder-hover);
+}
+
+@media (max-width: 640px) {
+  .folders-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

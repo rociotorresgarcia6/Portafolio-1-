@@ -13,7 +13,7 @@ const project = computed(() => findProjectById(route.params.id as string))
 <template>
   <section class="mx-auto max-w-5xl space-y-6 px-4 py-10 sm:px-6 sm:py-14">
     <Button variant="ghost" as-child class="px-0">
-      <RouterLink to="/">
+      <RouterLink to="/projects">
         <ArrowLeft class="size-4" />
         Volver
       </RouterLink>

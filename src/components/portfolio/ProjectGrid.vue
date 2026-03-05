@@ -28,7 +28,7 @@ defineProps<{
           <p class="text-xs uppercase tracking-wide text-slate-500">{{ project.year }} · {{ project.tool }}</p>
           <h2 class="text-lg font-semibold">{{ project.title }}</h2>
           <p class="text-sm text-slate-600">{{ project.summary }}</p>
-          <RouterLink :to="`/trabajo/${project.id}`" class="inline-flex items-center gap-1 text-sm font-semibold">
+          <RouterLink :to="`/projects/${project.id}`" class="inline-flex items-center gap-1 text-sm font-semibold">
             Ver proyecto
             <ArrowUpRight class="size-4" />
           </RouterLink>

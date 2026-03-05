@@ -1,5 +1,14 @@
+<script setup lang="ts">
+import ProjectGrid from '@/components/portfolio/ProjectGrid.vue'
+import { projectsByCategory } from '@/data/projects'
+
+const items = projectsByCategory('typography-magazine')
+</script>
+
 <template>
-  <section class="min-h-[calc(100vh-90px)] px-4 py-10 sm:min-h-[calc(100vh-73px)] sm:px-6">
-    <h1 class="font-display text-3xl uppercase tracking-[0.1em] sm:text-5xl">Typography and magazine works</h1>
-  </section>
+  <ProjectGrid
+    title="Typography and Magazine"
+    description="Piezas editoriales y estudios tipograficos orientados a narrativas impresas."
+    :items="items"
+  />
 </template>

@@ -1,4 +1,4 @@
-export type ProjectCategory = 'posters' | 'photography' | 'otros'
+export type ProjectCategory = 'posters' | 'photography' | 'branding-identity' | 'typography-magazine'
 
 export interface ProjectItem {
   id: string
@@ -11,64 +11,116 @@ export interface ProjectItem {
   featured?: boolean
 }
 
+export interface ProjectCategoryItem {
+  id: ProjectCategory
+  title: string
+  description: string
+  path: string
+}
+
+export const projectCategories: ProjectCategoryItem[] = [
+  {
+    id: 'photography',
+    title: 'Photography',
+    description: 'Retrato, calle y series visuales con edicion editorial.',
+    path: '/projects/photography',
+  },
+  {
+    id: 'posters',
+    title: 'Posters',
+    description: 'Carteleria experimental para musica, eventos y cultura visual.',
+    path: '/projects/posters',
+  },
+  {
+    id: 'branding-identity',
+    title: 'Branding and Identity',
+    description: 'Sistemas de marca, logotipos y aplicaciones graficas.',
+    path: '/projects/branding-identity',
+  },
+  {
+    id: 'typography-magazine',
+    title: 'Typography and Magazine',
+    description: 'Diseno tipografico, composicion y direccion de arte editorial.',
+    path: '/projects/typography-magazine',
+  },
+]
+
 export const projects: ProjectItem[] = [
   {
-    id: 'poster-festival',
-    title: 'Poster Festival Local',
+    id: 'street-portraits',
+    title: 'Street Portraits',
+    category: 'photography',
+    year: '2025',
+    tool: 'Lightroom + Fujifilm XT-30',
+    summary: 'Serie de retratos urbanos con luz dura y contraste alto.',
+    image: '/images/OBJ30.png',
+    featured: true,
+  },
+  {
+    id: 'night-shapes',
+    title: 'Night Shapes',
+    category: 'photography',
+    year: '2024',
+    tool: 'Lightroom + Sony A7',
+    summary: 'Arquitectura nocturna y movimiento con enfoque cinematografico.',
+    image: '/images/OBJ29.png',
+  },
+  {
+    id: 'neon-festival-poster',
+    title: 'Neon Festival Poster',
     category: 'posters',
     year: '2025',
     tool: 'Illustrator + Photoshop',
-    summary: 'Serie de carteles para evento cultural con estética tipográfica.',
-    image: 'https://images.unsplash.com/photo-1509941943102-10c232535736?auto=format&fit=crop&w=1000&q=80',
+    summary: 'Cartel principal y adaptaciones para campana digital.',
+    image: '/images/Parental advisory.PNG',
     featured: true,
   },
   {
-    id: 'poster-musica',
-    title: 'Campaña Música Urbana',
+    id: 'sonic-series',
+    title: 'Sonic Series',
     category: 'posters',
     year: '2025',
-    tool: 'Figma + Photoshop',
-    summary: 'Sistema visual para promoción de conciertos en redes y calle.',
-    image: 'https://images.unsplash.com/photo-1458560871784-56d23406c091?auto=format&fit=crop&w=1000&q=80',
-    featured: true,
+    tool: 'InDesign + Illustrator',
+    summary: 'Sistema modular de carteles para ciclo de conciertos.',
+    image: '/images/home/parental-advisory.png',
   },
   {
-    id: 'photo-street',
-    title: 'Street Portraits',
-    category: 'photography',
-    year: '2024',
-    tool: 'Lightroom + Cámara Mirrorless',
-    summary: 'Retratos urbanos con luz natural y edición en tonos cálidos.',
-    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=80',
-    featured: true,
-  },
-  {
-    id: 'photo-night',
-    title: 'Noches en Ciudad',
-    category: 'photography',
-    year: '2024',
-    tool: 'Lightroom',
-    summary: 'Serie fotográfica de arquitectura nocturna y movimiento.',
-    image: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1000&q=80',
-  },
-  {
-    id: 'brand-cafe',
-    title: 'Identidad de Marca Café',
-    category: 'otros',
+    id: 'marea-brand-kit',
+    title: 'Marea Brand Kit',
+    category: 'branding-identity',
     year: '2025',
-    tool: 'Illustrator + InDesign',
-    summary: 'Naming, logotipo y sistema de piezas para una marca local.',
-    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=80',
+    tool: 'Illustrator + Figma',
+    summary: 'Identidad visual completa para estudio creativo emergente.',
+    image: '/images/OBJ11.png',
     featured: true,
   },
   {
-    id: 'ui-app',
-    title: 'UI App de Eventos',
-    category: 'otros',
+    id: 'sola-cafe-identity',
+    title: 'Sola Cafe Identity',
+    category: 'branding-identity',
+    year: '2024',
+    tool: 'Illustrator + After Effects',
+    summary: 'Logotipo, packaging y piezas de lanzamiento para redes.',
+    image: '/images/OBJ17.png',
+  },
+  {
+    id: 'radical-grid',
+    title: 'Radical Grid Magazine',
+    category: 'typography-magazine',
     year: '2025',
-    tool: 'Figma',
-    summary: 'Prototipo de interfaz móvil para agenda de eventos culturales.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80',
+    tool: 'InDesign + Photoshop',
+    summary: 'Diseno editorial de 48 paginas con foco en ritmo tipografico.',
+    image: '/images/Abueladedo.PNG',
+    featured: true,
+  },
+  {
+    id: 'type-study-01',
+    title: 'Type Study 01',
+    category: 'typography-magazine',
+    year: '2024',
+    tool: 'Glyphs + Illustrator',
+    summary: 'Exploracion de lettering y composicion para portada.',
+    image: '/images/home/abueladedo.png',
   },
 ]
 
@@ -76,6 +128,9 @@ export const featuredProjects = projects.filter((project) => project.featured)
 
 export const projectsByCategory = (category: ProjectCategory) =>
   projects.filter((project) => project.category === category)
+
+export const projectsCountByCategory = (category: ProjectCategory) =>
+  projects.filter((project) => project.category === category).length
 
 export const findProjectById = (id: string) =>
   projects.find((project) => project.id === id)

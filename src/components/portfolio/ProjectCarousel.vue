@@ -34,7 +34,7 @@ const transformValue = computed(() => `translateX(-${currentIndex.value * 100}%)
             <h3 class="text-xl font-semibold">{{ project.title }}</h3>
             <p class="text-sm text-slate-600">{{ project.summary }}</p>
             <Button as-child>
-              <RouterLink :to="`/trabajo/${project.id}`">Ver detalle</RouterLink>
+              <RouterLink :to="`/projects/${project.id}`">Ver detalle</RouterLink>
             </Button>
           </div>
         </article>
