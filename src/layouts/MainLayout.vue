@@ -5,8 +5,10 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <div class="min-h-screen bg-white text-black">
     <header class="sticky top-0 z-20 border-b border-black/10 bg-white/95 backdrop-blur">
-      <nav class="flex items-center justify-between px-3 py-4 sm:px-4">
-        <RouterLink to="/" class="brand-link">rochos</RouterLink>
+      <nav class="flex h-[73px] items-center justify-between px-3 sm:px-4">
+        <RouterLink to="/" class="brand-link" aria-label="Home">
+          <img src="/images/solamarillo.PNG" alt="Sol amarillo" class="brand-star" />
+        </RouterLink>
 
         <ul class="flex items-center gap-6 whitespace-nowrap">
           <li>
@@ -30,17 +32,19 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style scoped>
 .brand-link {
-  font-family: 'Arial Black', Arial, sans-serif;
-  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
-  line-height: 0.9;
-  text-transform: lowercase;
-  color: #fb1200;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.brand-star {
+  height: clamp(2.9rem, 4.6vw, 3.5rem);
+  width: auto;
 }
 
 .menu-link {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-style: italic;
-  font-size: 1.55rem;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
   line-height: 1;
   color: #000000;
   text-decoration: none;
