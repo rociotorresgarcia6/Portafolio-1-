@@ -64,8 +64,8 @@ const folderVisuals: Record<string, { image: string; hoverColor: string; label?:
   --folder-hover: #000000;
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.55rem;
+  align-items: center;
+  gap: 0.1rem;
   text-decoration: none;
 }
 
@@ -78,10 +78,13 @@ const folderVisuals: Record<string, { image: string; hoverColor: string; label?:
 
 .folder-label {
   margin: 0;
+  margin-top: -0.2rem;
   color: #000000;
-  font-family: 'eurostile-extended', sans-serif;
-  font-size: clamp(1.05rem, 1.65vw, 1.7rem);
+  font-family: 'sloop-script-two', 'Sloop Script Bold Two', 'sloop-script-one', cursive;
+  font-weight: 700;
+  font-size: clamp(1.35rem, 2.1vw, 2rem);
   letter-spacing: 0.01em;
+  text-align: center;
   transition: color 0.18s ease;
 }
 
