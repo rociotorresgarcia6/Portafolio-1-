@@ -1,104 +1,86 @@
 <script setup lang="ts">
-import { projectCategories } from '@/data/projects'
 import { RouterLink } from 'vue-router'
 
-const folderVisuals: Record<string, { image: string; hoverColor: string; label?: string }> = {
-  photography: {
-    image: '/images/Carpetaazul .png',
-    hoverColor: '#0d5cff',
-    label: 'Photograpy',
-  },
-  posters: {
+const projectButtons = [
+  {
+    id: 'photography',
+    label: 'Photography',
+    path: '/projects/photography',
     image: '/images/Carpetaamarilla .png',
-    hoverColor: '#d5a900',
   },
-  'branding-identity': {
-    image: '/images/Carpetaroja .png',
-    hoverColor: '#d0342c',
-  },
-  'typography-magazine': {
+  {
+    id: 'posters',
+    label: 'Posters',
+    path: '/projects/posters',
     image: '/images/Carpetaazul .png',
-    hoverColor: '#0d5cff',
   },
-}
+  {
+    id: 'branding-identity',
+    label: 'Branding and Identity Projects',
+    path: '/projects/branding-identity',
+    image: '/images/Carpetaroja .png',
+  },
+  {
+    id: 'typography-magazine',
+    label: 'Tipography and Magazine Works',
+    path: '/projects/typography-magazine',
+    image: '/images/Carpetaamarilla .png',
+  },
+]
 </script>
 
 <template>
   <section class="projects-page min-h-[calc(100vh-90px)] px-3 py-5 sm:min-h-[calc(100vh-73px)] sm:px-4 sm:py-6">
-    <div class="mx-auto w-full max-w-6xl">
-      <div class="folders-grid" role="list" aria-label="Categorias de proyectos">
-        <RouterLink
-          v-for="category in projectCategories"
-          :key="category.id"
-          :to="category.path"
-          class="folder-card"
-          role="listitem"
-          :style="{ '--folder-hover': folderVisuals[category.id]?.hoverColor ?? '#000000' }"
-        >
-          <img
-            class="folder-image"
-            :src="folderVisuals[category.id]?.image ?? '/images/Carpetaazul .png'"
-            :alt="`Carpeta de ${category.title}`"
-          />
-          <p class="folder-label tk-eurostile-extended">{{ folderVisuals[category.id]?.label ?? category.title }}</p>
-        </RouterLink>
-      </div>
+    <div class="projects-buttons" aria-label="Project categories">
+      <RouterLink
+        v-for="button in projectButtons"
+        :key="button.id"
+        :to="button.path"
+        class="project-button"
+      >
+        <img :src="button.image" :alt="`Open ${button.label}`" class="project-button-image" />
+        <span class="project-button-label">{{ button.label }}</span>
+      </RouterLink>
     </div>
   </section>
 </template>
 
 <style scoped>
 .projects-page {
-  background: #ffffff;
+  background: #f8f8f8;
 }
 
-.folders-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(1rem, 2.8vw, 2rem);
-  align-items: start;
-  justify-items: start;
+.projects-buttons {
+  width: min(100%, 420px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
 }
 
-.folder-card {
-  --folder-hover: #000000;
+.project-button {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.1rem;
   text-decoration: none;
 }
 
-.folder-image {
-  width: clamp(150px, 24vw, 255px);
+.project-button-image {
+  width: clamp(180px, 28vw, 255px);
   height: auto;
-  transform-origin: center;
-  transition: transform 0.18s ease;
+  transition: transform 0.2s ease;
 }
 
-.folder-label {
-  margin: 0;
-  margin-top: -0.2rem;
-  color: #000000;
+.project-button-label {
+  margin-top: -0.1rem;
+  color: #1e1e1e;
   font-family: 'sloop-script-two', 'Sloop Script Bold Two', 'sloop-script-one', cursive;
-  font-weight: 700;
-  font-size: clamp(1.35rem, 2.1vw, 2rem);
-  letter-spacing: 0.01em;
+  font-size: clamp(1.3rem, 2vw, 1.9rem);
   text-align: center;
-  transition: color 0.18s ease;
 }
 
-.folder-card:hover .folder-image {
-  transform: scale(1.08);
-}
-
-.folder-card:hover .folder-label {
-  color: var(--folder-hover);
-}
-
-@media (max-width: 640px) {
-  .folders-grid {
-    grid-template-columns: 1fr;
-  }
+.project-button:hover .project-button-image {
+  transform: scale(1.06);
 }
 </style>
