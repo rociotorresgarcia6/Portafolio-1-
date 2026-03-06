@@ -23,7 +23,7 @@ const cameraProjects = {
     ],
   },
   2: {
-    title: "mediterranean fashion week '25",
+    title: "clec fashion festival '25",
     description:
       'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
     date: '21 de octubre de 2025.',
@@ -38,7 +38,7 @@ const cameraProjects = {
     ],
   },
   3: {
-    title: "mediterranean fashion week '25",
+    title: "koopey pop up '25",
     description:
       'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
     date: '21 de octubre de 2025.',
@@ -52,7 +52,7 @@ const cameraProjects = {
     ],
   },
   4: {
-    title: "mediterranean fashion week '25",
+    title: 'urban life and others',
     description:
       'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
     date: '21 de octubre de 2025.',
@@ -181,20 +181,18 @@ onBeforeUnmount(() => {
 
     <section v-if="activeProject" class="photo-panel" @click.stop>
       <div class="photo-panel-content">
-        <div class="photo-carousel">
-          <button type="button" class="carousel-arrow" @click.stop="prevSlide" aria-label="Foto anterior">
-            <span aria-hidden="true">&#8249;</span>
-          </button>
-          <img :src="currentSlide" alt="fotografia" class="carousel-image" />
-          <button type="button" class="carousel-arrow" @click.stop="nextSlide" aria-label="Foto siguiente">
-            <span aria-hidden="true">&#8250;</span>
-          </button>
-        </div>
-
-        <div class="photo-copy">
+        <div class="photo-carousel-wrap">
           <h2 class="photo-title">{{ activeProject.title }}</h2>
+          <div class="photo-carousel">
+            <button type="button" class="carousel-arrow" @click.stop="prevSlide" aria-label="Foto anterior">
+              <span aria-hidden="true">&#8249;</span>
+            </button>
+            <img :src="currentSlide" alt="fotografia" class="carousel-image" />
+            <button type="button" class="carousel-arrow" @click.stop="nextSlide" aria-label="Foto siguiente">
+              <span aria-hidden="true">&#8250;</span>
+            </button>
+          </div>
           <p class="photo-description">{{ activeProject.description }}</p>
-          <p class="photo-date">{{ activeProject.date }}</p>
         </div>
       </div>
     </section>
@@ -204,12 +202,13 @@ onBeforeUnmount(() => {
 <style scoped>
 .photography-empty {
   position: relative;
-  min-height: 100vh;
+  min-height: 145vh;
   background-color: #f8f5ef;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   padding-top: 3rem;
+  padding-bottom: 8rem;
 }
 
 .photography-hint {
@@ -264,33 +263,42 @@ onBeforeUnmount(() => {
   top: 32%;
   left: 50%;
   transform: translateX(-50%);
-  width: min(78vw, 900px);
-  min-height: 470px;
+  width: min(90vw, 1120px);
+  min-height: 700px;
   border-radius: 14px;
-  background-color: #fff;
+  background-color: #f8f5ef;
 }
 
 .photo-panel-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.25rem;
-  padding: 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 1.5rem 1.8rem;
   height: 100%;
   box-sizing: border-box;
+}
+
+.photo-carousel-wrap {
+  --carousel-side-offset: calc(42px + 0.55rem);
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.2rem 1.4rem;
+  min-height: 640px;
 }
 
 .photo-carousel {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.55rem;
 }
 
 .carousel-image {
   width: 100%;
-  max-width: 340px;
-  height: 400px;
-  object-fit: cover;
+  height: clamp(340px, 45vw, 560px);
+  object-fit: contain;
+  background-color: #f5f1ea;
+  border-radius: 10px;
   justify-self: center;
 }
 
@@ -314,58 +322,64 @@ onBeforeUnmount(() => {
   line-height: 1;
 }
 
-.photo-copy {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
 .photo-title {
-  margin: 0;
+  margin: 0 0 0.8rem;
+  padding-left: var(--carousel-side-offset);
+  padding-right: var(--carousel-side-offset);
   font-family: Helvetica, Arial, sans-serif;
   font-style: oblique;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.15;
 }
 
 .photo-description {
-  margin: 1.15rem 0 0;
+  margin: 0.9rem 0 0;
+  padding-left: var(--carousel-side-offset);
+  max-width: min(52ch, 56%);
   font-family: Helvetica, Arial, sans-serif;
+  font-style: oblique;
   font-size: 0.72rem;
   line-height: 1.3;
 }
 
-.photo-date {
-  margin: auto 0 0;
-  font-family: Helvetica, Arial, sans-serif;
-  font-style: oblique;
-  font-size: 1rem;
-}
-
 @media (max-width: 920px) {
+  .photography-empty {
+    min-height: 130vh;
+    padding-bottom: 5rem;
+  }
+
   .photo-panel {
-    width: min(92vw, 900px);
+    top: 28%;
+    width: min(94vw, 900px);
     min-height: 560px;
   }
 
   .photo-panel-content {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    padding: 1.1rem 1rem 1.25rem;
+    gap: 0;
+  }
+
+  .photo-carousel-wrap {
+    --carousel-side-offset: 0px;
+    min-height: 0;
+    padding: 0.9rem 0.9rem 1rem;
   }
 
   .carousel-image {
-    max-width: 100%;
-    height: 320px;
+    height: clamp(210px, 48vw, 310px);
+  }
+
+  .photo-description {
+    max-width: min(60ch, 100%);
+    padding: 0;
+    margin-top: 0.6rem;
   }
 
   .photo-title {
+    padding-left: 0;
+    padding-right: 0;
     font-size: 1.05rem;
-  }
-
-  .photo-date {
-    margin-top: 1.4rem;
-    font-size: 0.9rem;
   }
 }
 </style>
