@@ -4,25 +4,25 @@ import { RouterLink } from 'vue-router'
 const projectButtons = [
   {
     id: 'photography',
-    label: 'Photography',
+    label: 'photography',
     path: '/projects/photography',
     image: '/images/Carpetaamarilla .png',
   },
   {
     id: 'posters',
-    label: 'Posters',
+    label: 'posters',
     path: '/projects/posters',
     image: '/images/Carpetaazul .png',
   },
   {
     id: 'branding-identity',
-    label: 'Branding and Identity Projects',
+    label: 'branding and identity projects',
     path: '/projects/branding-identity',
     image: '/images/Carpetaroja .png',
   },
   {
     id: 'typography-magazine',
-    label: 'Tipography and Magazine Works',
+    label: 'tipography and magazine works',
     path: '/projects/typography-magazine',
     image: '/images/Carpetaamarilla .png',
   },
@@ -52,32 +52,34 @@ const projectButtons = [
 
 .projects-buttons {
   width: min(100%, 420px);
-  margin: 0 auto;
+  margin: 0;
+  padding-left: 1.6rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.9rem;
 }
 
 .project-button {
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   text-decoration: none;
 }
 
 .project-button-image {
-  width: clamp(180px, 28vw, 255px);
+  width: clamp(120px, 18vw, 170px);
   height: auto;
   transition: transform 0.2s ease;
 }
 
 .project-button-label {
-  margin-top: -0.1rem;
+  margin-top: -0.7rem;
+  padding-left: 0.85rem;
   color: #1e1e1e;
-  font-family: 'sloop-script-two', 'Sloop Script Bold Two', 'sloop-script-one', cursive;
-  font-size: clamp(1.3rem, 2vw, 1.9rem);
-  text-align: center;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: clamp(0.85rem, 1.3vw, 1.2rem);
+  text-align: left;
 }
 
 .project-button:hover .project-button-image {
