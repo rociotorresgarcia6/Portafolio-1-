@@ -1,35 +1,56 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const isFirstCameraOpen = ref(false)
+const activeCamera = ref<number | null>(null)
 
-const handleFirstCameraClick = () => {
-  isFirstCameraOpen.value = !isFirstCameraOpen.value
+const handleCameraClick = (cameraId: number) => {
+  activeCamera.value = activeCamera.value === cameraId ? null : cameraId
 }
 
-const closeFirstCameraPanel = () => {
-  isFirstCameraOpen.value = false
+const closeCameraPanel = () => {
+  activeCamera.value = null
 }
 </script>
 
 <template>
-  <section class="photography-empty" @click="closeFirstCameraPanel">
+  <section class="photography-empty" @click="closeCameraPanel">
     <p class="photography-hint">click and discover!!</p>
     <div class="camera-row" @click.stop>
       <button
         type="button"
         class="camera-trigger"
-        :class="{ 'is-open': isFirstCameraOpen }"
-        @click.stop="handleFirstCameraClick"
+        :class="{ 'is-open': activeCamera === 1 }"
+        @click.stop="handleCameraClick(1)"
       >
         <img src="/images/cámara2.png" alt="camara 2" class="camera-image" />
       </button>
-      <img src="/images/camara4.png" alt="camara 4" class="camera-image" />
-      <img src="/images/cámara1.png" alt="camara 1" class="camera-image" />
-      <img src="/images/camara3.png" alt="camara 3" class="camera-image" />
+      <button
+        type="button"
+        class="camera-trigger"
+        :class="{ 'is-open': activeCamera === 2 }"
+        @click.stop="handleCameraClick(2)"
+      >
+        <img src="/images/camara4.png" alt="camara 4" class="camera-image" />
+      </button>
+      <button
+        type="button"
+        class="camera-trigger"
+        :class="{ 'is-open': activeCamera === 3 }"
+        @click.stop="handleCameraClick(3)"
+      >
+        <img src="/images/cámara1.png" alt="camara 1" class="camera-image" />
+      </button>
+      <button
+        type="button"
+        class="camera-trigger"
+        :class="{ 'is-open': activeCamera === 4 }"
+        @click.stop="handleCameraClick(4)"
+      >
+        <img src="/images/camara3.png" alt="camara 3" class="camera-image" />
+      </button>
     </div>
 
-    <section v-if="isFirstCameraOpen" class="photo-panel" @click.stop />
+    <section v-if="activeCamera !== null" class="photo-panel" @click.stop />
   </section>
 </template>
 
