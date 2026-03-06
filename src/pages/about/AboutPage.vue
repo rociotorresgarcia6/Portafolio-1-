@@ -35,21 +35,14 @@
       </div>
     </div>
 
-    <div class="about-footer-strip">
-      <div class="about-footer-brand">
-        <img src="/images/solnegro.PNG" alt="Sol negro" class="about-footer-sol" />
-        <span>rochos</span>
-      </div>
-    </div>
-
     <img src="/images/about/nina-gafas.png" alt="Dibujo nina" class="about-girl" />
+    <p class="about-girl-sign">rochos</p>
   </section>
 </template>
 
 <style scoped>
 .about-layout {
   --off-white: #f8f5ef;
-  --footer-height: 146px;
   position: relative;
   background: var(--off-white);
   min-height: calc(100vh - 73px);
@@ -128,8 +121,8 @@
 
 .about-blue-panel {
   background: #4db3df;
-  min-height: 390px;
-  padding: 2.15rem 1.6rem 7.6rem;
+  min-height: 90vh;
+  padding: 2.15rem 1.6rem 10rem;
 }
 
 .about-phylosophy {
@@ -145,58 +138,49 @@
   margin-top: 1.4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(0.8rem, 3.5vw, 3.3rem);
+  gap: clamp(1rem, 4vw, 4rem);
   align-items: start;
 }
 
 .about-phylosophy-image {
   width: 100%;
-  max-width: 460px;
+  max-width: 620px;
   height: auto;
   object-fit: contain;
 }
 
 .about-phylosophy-image:first-child {
   justify-self: start;
+  max-width: 500px;
 }
 
 .about-phylosophy-image:last-child {
   justify-self: end;
 }
 
-.about-footer-strip {
-  min-height: var(--footer-height);
-  background: var(--off-white);
-  padding: 1.05rem 1.6rem;
-  display: flex;
-  align-items: flex-end;
-}
-
-.about-footer-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  font-family: 'Arial Black', Arial, sans-serif;
-  font-size: clamp(1.75rem, 2.15vw, 2.3rem);
-  font-style: normal;
-  font-weight: 900;
-  color: #000;
-}
-
-.about-footer-sol {
-  width: clamp(34px, 4vw, 50px);
-  height: auto;
-}
-
 .about-girl {
   position: absolute;
   left: 50%;
-  bottom: calc(var(--footer-height) - clamp(70px, 11vw, 118px));
+  bottom: clamp(-2rem, -1vw, -0.6rem);
   transform: translateX(-50%);
-  width: clamp(180px, 26vw, 300px);
+  width: clamp(240px, 34vw, 400px);
   height: auto;
   z-index: 6;
   pointer-events: none;
+}
+
+.about-girl-sign {
+  position: absolute;
+  left: 48.8%;
+  bottom: clamp(0.35rem, 1.2vw, 1rem);
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: clamp(0.95rem, 1.25vw, 1.2rem);
+  color: #000;
+  z-index: 7;
 }
 
 @media (max-width: 900px) {
@@ -223,25 +207,27 @@
   }
 
   .about-blue-panel {
-    min-height: 320px;
-    padding-bottom: 6.3rem;
+    min-height: 90vh;
+    padding-bottom: 8rem;
   }
 
   .about-phylosophy-images {
-    gap: 1rem;
+    gap: 1.4rem;
   }
 
   .about-girl {
-    width: clamp(160px, 31vw, 235px);
-    bottom: calc(var(--footer-height) - clamp(60px, 9.5vw, 98px));
+    width: clamp(210px, 38vw, 300px);
+    bottom: clamp(-1.5rem, -0.8vw, -0.4rem);
+  }
+
+  .about-girl-sign {
+    left: 48.3%;
+    bottom: clamp(0.3rem, 1vw, 0.85rem);
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
   }
 }
 
 @media (max-width: 680px) {
-  .about-layout {
-    --footer-height: 118px;
-  }
-
   .about-main {
     min-height: 56vh;
     padding-top: 3.2rem;
@@ -275,9 +261,9 @@
   }
 
   .about-blue-panel {
-    min-height: 250px;
+    min-height: 90vh;
     padding-top: 1.35rem;
-    padding-bottom: 4.9rem;
+    padding-bottom: 6.5rem;
   }
 
   .about-phylosophy {
@@ -286,21 +272,18 @@
 
   .about-phylosophy-images {
     margin-top: 1rem;
-    gap: 0.55rem;
-  }
-
-  .about-footer-brand {
-    font-size: 1.35rem;
-    gap: 0.3rem;
-  }
-
-  .about-footer-sol {
-    width: 29px;
+    gap: 0.9rem;
   }
 
   .about-girl {
-    width: 155px;
-    bottom: calc(var(--footer-height) - 54px);
+    width: 220px;
+    bottom: -1rem;
+  }
+
+  .about-girl-sign {
+    left: 47.8%;
+    bottom: 0.25rem;
+    font-size: 0.9rem;
   }
 }
 </style>
