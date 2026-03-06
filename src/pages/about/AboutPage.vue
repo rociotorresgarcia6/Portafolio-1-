@@ -34,9 +34,6 @@
         <img src="/images/filosofia2.PNG" alt="Filosofia derecha" class="about-phylosophy-image" />
       </div>
     </div>
-
-    <img src="/images/about/nina-gafas.png" alt="Dibujo nina" class="about-girl" />
-    <p class="about-girl-sign">rochos</p>
   </section>
 </template>
 
@@ -120,9 +117,9 @@
 }
 
 .about-blue-panel {
-  background: #4db3df;
+  background: var(--off-white);
   min-height: 90vh;
-  padding: 2.15rem 1.6rem 10rem;
+  padding: 2.15rem 1.6rem 3rem;
 }
 
 .about-phylosophy {
@@ -144,43 +141,18 @@
 
 .about-phylosophy-image {
   width: 100%;
-  max-width: 620px;
+  max-width: 760px;
   height: auto;
   object-fit: contain;
 }
 
 .about-phylosophy-image:first-child {
   justify-self: start;
-  max-width: 500px;
+  max-width: 700px;
 }
 
 .about-phylosophy-image:last-child {
   justify-self: end;
-}
-
-.about-girl {
-  position: absolute;
-  left: 50%;
-  bottom: clamp(-2rem, -1vw, -0.6rem);
-  transform: translateX(-50%);
-  width: clamp(240px, 34vw, 400px);
-  height: auto;
-  z-index: 6;
-  pointer-events: none;
-}
-
-.about-girl-sign {
-  position: absolute;
-  left: 48.8%;
-  bottom: clamp(0.35rem, 1.2vw, 1rem);
-  transform: translateX(-50%);
-  margin: 0;
-  font-family: 'Arial Black', Arial, sans-serif;
-  font-style: normal;
-  font-weight: 900;
-  font-size: clamp(0.95rem, 1.25vw, 1.2rem);
-  color: #000;
-  z-index: 7;
 }
 
 @media (max-width: 900px) {
@@ -208,22 +180,11 @@
 
   .about-blue-panel {
     min-height: 90vh;
-    padding-bottom: 8rem;
+    padding-bottom: 2.2rem;
   }
 
   .about-phylosophy-images {
     gap: 1.4rem;
-  }
-
-  .about-girl {
-    width: clamp(210px, 38vw, 300px);
-    bottom: clamp(-1.5rem, -0.8vw, -0.4rem);
-  }
-
-  .about-girl-sign {
-    left: 48.3%;
-    bottom: clamp(0.3rem, 1vw, 0.85rem);
-    font-size: clamp(0.9rem, 1.8vw, 1rem);
   }
 }
 
@@ -263,7 +224,7 @@
   .about-blue-panel {
     min-height: 90vh;
     padding-top: 1.35rem;
-    padding-bottom: 6.5rem;
+    padding-bottom: 2rem;
   }
 
   .about-phylosophy {
@@ -272,18 +233,7 @@
 
   .about-phylosophy-images {
     margin-top: 1rem;
-    gap: 0.9rem;
-  }
-
-  .about-girl {
-    width: 220px;
-    bottom: -1rem;
-  }
-
-  .about-girl-sign {
-    left: 47.8%;
-    bottom: 0.25rem;
-    font-size: 0.9rem;
+    gap: 1.1rem;
   }
 }
 </style>
