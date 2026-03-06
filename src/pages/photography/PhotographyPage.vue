@@ -12,28 +12,58 @@ const cameraProjects = {
     description:
       'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
     date: '21 de octubre de 2025.',
-    slides: ['/images/llamada3.png', '/images/llamada.png', '/images/niñagafas.PNG'],
+    slides: [
+      '/images/mfw/DSC02422.JPG',
+      '/images/mfw/DSC02426.JPG',
+      '/images/mfw/DSC02449.JPG',
+      '/images/mfw/DSC02455.JPG',
+      '/images/mfw/DSC02456.JPG',
+      '/images/mfw/DSC02463.JPG',
+      '/images/mfw/DSC02477.JPG',
+    ],
   },
   2: {
     title: "mediterranean fashion week '25",
     description:
       'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
     date: '21 de octubre de 2025.',
-    slides: ['/images/llamada3.png', '/images/llamada.png', '/images/niñagafas.PNG'],
+    slides: [
+      '/images/clec/DSC02610.JPG',
+      '/images/clec/DSC02642.JPG',
+      '/images/clec/DSC02651.JPG',
+      '/images/clec/DSC02673.JPG',
+      '/images/clec/DSC02703.JPG',
+      '/images/clec/DSC02713.JPG',
+      '/images/clec/DSC02726.JPG',
+    ],
   },
   3: {
     title: "mediterranean fashion week '25",
     description:
       'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
     date: '21 de octubre de 2025.',
-    slides: ['/images/llamada3.png', '/images/llamada.png', '/images/niñagafas.PNG'],
+    slides: [
+      '/images/koopey pop up/IMG_0016.JPG',
+      '/images/koopey pop up/IMG_0349.JPG',
+      '/images/koopey pop up/IMG_9818.JPG',
+      '/images/koopey pop up/IMG_9889.JPG',
+      '/images/koopey pop up/IMG_9919.JPG',
+      '/images/koopey pop up/IMG_9922.JPG',
+    ],
   },
   4: {
     title: "mediterranean fashion week '25",
     description:
       'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
     date: '21 de octubre de 2025.',
-    slides: ['/images/llamada3.png', '/images/llamada.png', '/images/niñagafas.PNG'],
+    slides: [
+      '/images/otros/IMG_7661.JPG',
+      '/images/otros/IMG_7695.JPG',
+      '/images/otros/IMG_7776.JPG',
+      '/images/otros/IMG_7815.JPG',
+      '/images/otros/IMG_7847.JPG',
+      '/images/otros/IMG_7854.JPG',
+    ],
   },
 } as const
 
