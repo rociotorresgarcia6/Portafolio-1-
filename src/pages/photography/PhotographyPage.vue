@@ -34,7 +34,6 @@ const cameraProjects = {
       '/images/clec/DSC02673.JPG',
       '/images/clec/DSC02703.JPG',
       '/images/clec/DSC02713.JPG',
-      '/images/clec/DSC02726.JPG',
     ],
   },
   3: {
@@ -57,12 +56,16 @@ const cameraProjects = {
       'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
     date: '21 de octubre de 2025.',
     slides: [
+      '/images/otros/1f1bacd3-1e9c-4c87-ab3b-26edf662048d.jpg',
+      '/images/otros/2eacb691-6e24-4d3d-96e3-0133ec08c9a2.jpg',
+      '/images/otros/797d1aa1-da9c-4c0c-bd4a-0bf16343b398.jpg',
+      '/images/otros/DSCN1561.JPG',
+      '/images/otros/DSCN1572.JPG',
       '/images/otros/IMG_7661.JPG',
       '/images/otros/IMG_7695.JPG',
       '/images/otros/IMG_7776.JPG',
-      '/images/otros/IMG_7815.JPG',
       '/images/otros/IMG_7847.JPG',
-      '/images/otros/IMG_7854.JPG',
+      '/images/otros/acfa47db-7fda-445b-83f9-e9589a2697d1.jpg',
     ],
   },
 } as const
