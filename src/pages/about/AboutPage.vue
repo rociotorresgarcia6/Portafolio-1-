@@ -3,16 +3,20 @@
     <div class="about-main">
       <div class="about-body-copy">
         <p>
-          I'm Rochosm, the least cool person in the world. But what I am is creative, experimental, always eager to
-          learn. I love colors and extravagant shapes.
+          I'm Rochos, the least cool person in the world.<br />
+          But what I am is creative, experimental, always eager<br />
+          to learn. I love colors and extravagant shapes.
         </p>
         <p>
-          Design, for me, is my identity, and that's why I created "Only for Cool People": to build a community. A
-          group of people who feel connected to my art and my ideas.
+          Design, for me, is my identity, and that's why I created<br />
+          "Only for Cool People": to build a community.<br />
+          A group of people who feel connected to my art and my ideas.
         </p>
         <p>Oh, and by the way, I hate AGUA CON GAS.</p>
       </div>
-      <div class="about-bottle" aria-hidden="true"></div>
+      <div class="about-main-media">
+        <img src="/images/dibujoaguacongas.PNG" alt="Dibujo agua con gas" class="about-bottle" />
+      </div>
     </div>
 
     <div class="about-red-strip">
@@ -25,46 +29,51 @@
 
     <div class="about-blue-panel">
       <h2 class="about-phylosophy">phylosophy</h2>
-      <div class="about-words" aria-hidden="true">
-        <span>liberty</span>
-        <span>random</span>
-        <span>experimentation</span>
-        <span>spontaneity</span>
-        <span>exclusive</span>
-        <span>irony</span>
+      <div class="about-phylosophy-images">
+        <img src="/images/filosofia1.PNG" alt="Filosofia izquierda" class="about-phylosophy-image" />
+        <img src="/images/filosofia2.PNG" alt="Filosofia derecha" class="about-phylosophy-image" />
       </div>
     </div>
 
     <div class="about-footer-strip">
       <div class="about-footer-brand">
-        <span class="about-footer-star">*</span>
+        <img src="/images/solnegro.PNG" alt="Sol negro" class="about-footer-sol" />
         <span>rochos</span>
       </div>
-      <div class="about-footer-face" aria-hidden="true"></div>
     </div>
+
+    <img src="/images/about/nina-gafas.png" alt="Dibujo nina" class="about-girl" />
   </section>
 </template>
 
 <style scoped>
 .about-layout {
+  --off-white: #f8f5ef;
+  --footer-height: 146px;
+  position: relative;
+  background: var(--off-white);
   min-height: calc(100vh - 73px);
-  background: #f8f5ef;
+  overflow: hidden;
 }
 
 .about-main {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 2rem 1.6rem 1.2rem;
+  position: relative;
+  min-height: 62vh;
+  background: var(--off-white);
+  padding: 4.2rem 1.6rem 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(190px, 28vw, 300px);
+  gap: clamp(0.8rem, 2.5vw, 2rem);
+  align-items: start;
 }
 
 .about-body-copy {
-  max-width: 620px;
+  max-width: min(62ch, 98%);
   font-family: Helvetica, Arial, sans-serif;
   font-style: oblique;
   color: #000;
-  font-size: clamp(1.2rem, 1.7vw, 2rem);
-  line-height: 1.22;
+  font-size: clamp(1.02rem, 1.45vw, 1.55rem);
+  line-height: 1.23;
 }
 
 .about-body-copy p {
@@ -72,33 +81,41 @@
 }
 
 .about-body-copy p + p {
-  margin-top: 1.4rem;
+  margin-top: 1.95rem;
+}
+
+.about-main-media {
+  position: relative;
+  width: 100%;
+  min-height: clamp(280px, 43vh, 420px);
 }
 
 .about-bottle {
-  width: clamp(130px, 18vw, 180px);
-  height: clamp(260px, 30vw, 360px);
-  margin-right: clamp(0.2rem, 2.6vw, 2.4rem);
-  align-self: flex-end;
-  background-image: url('/images/about/gas-bottle.png');
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: contain;
+  position: absolute;
+  left: 50%;
+  bottom: -54%;
+  transform: translateX(-50%);
+  height: clamp(430px, 72vh, 680px);
+  width: auto;
+  max-width: none;
+  z-index: 5;
 }
 
 .about-red-strip {
-  background: #ff4a3a;
-  padding: 1.15rem 1.6rem 1.3rem;
+  background: #ff4938;
+  min-height: 250px;
+  padding: 1.45rem 1.6rem 1.15rem;
 }
 
 .about-red-copy {
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  font-style: oblique;
+  margin: 1.7rem 0 0;
+  max-width: 530px;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 900;
   color: #fff;
-  font-size: clamp(1.28rem, 2.2vw, 2rem);
+  font-size: clamp(1.32rem, 2.1vw, 2.02rem);
   line-height: 1.12;
-  max-width: 640px;
 }
 
 .about-red-copy span {
@@ -106,110 +123,92 @@
 }
 
 .about-red-copy span + span {
-  margin-top: 0.33rem;
+  margin-top: 0.36rem;
 }
 
 .about-blue-panel {
   background: #4db3df;
-  min-height: 280px;
-  padding: 2rem 1.6rem 1.7rem;
+  min-height: 390px;
+  padding: 2.15rem 1.6rem 7.6rem;
 }
 
 .about-phylosophy {
   margin: 0;
   font-family: 'Arial Black', Arial, sans-serif;
+  font-size: clamp(1.65rem, 2.4vw, 2.35rem);
   font-style: normal;
   font-weight: 900;
-  font-size: clamp(1.6rem, 2.4vw, 2.35rem);
   color: #000;
 }
 
-.about-words {
-  margin-top: 1.2rem;
-  min-height: 160px;
-  position: relative;
-  font-family: 'Comic Sans MS', 'Marker Felt', cursive;
-  font-size: clamp(1.45rem, 3vw, 2.45rem);
-  color: #061626;
+.about-phylosophy-images {
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(0.8rem, 3.5vw, 3.3rem);
+  align-items: start;
 }
 
-.about-words span {
-  position: absolute;
+.about-phylosophy-image {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  object-fit: contain;
 }
 
-.about-words span:nth-child(1) {
-  left: 3%;
-  top: 20%;
+.about-phylosophy-image:first-child {
+  justify-self: start;
 }
 
-.about-words span:nth-child(2) {
-  left: 7%;
-  top: 48%;
-}
-
-.about-words span:nth-child(3) {
-  left: 3%;
-  top: 70%;
-}
-
-.about-words span:nth-child(4) {
-  right: 18%;
-  top: 6%;
-}
-
-.about-words span:nth-child(5) {
-  right: 24%;
-  top: 38%;
-}
-
-.about-words span:nth-child(6) {
-  right: 14%;
-  top: 67%;
+.about-phylosophy-image:last-child {
+  justify-self: end;
 }
 
 .about-footer-strip {
-  min-height: 120px;
-  padding: 1rem 1.6rem;
-  background: #f8f5ef;
+  min-height: var(--footer-height);
+  background: var(--off-white);
+  padding: 1.05rem 1.6rem;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
 }
 
 .about-footer-brand {
-  margin-bottom: 0.8rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-family: Helvetica, Arial, sans-serif;
-  font-style: oblique;
-  font-size: 2rem;
+  gap: 0.55rem;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: clamp(1.75rem, 2.15vw, 2.3rem);
+  font-style: normal;
+  font-weight: 900;
   color: #000;
 }
 
-.about-footer-star {
-  font-size: 2.2rem;
-  line-height: 1;
+.about-footer-sol {
+  width: clamp(34px, 4vw, 50px);
+  height: auto;
 }
 
-.about-footer-face {
-  width: clamp(145px, 23vw, 280px);
-  height: clamp(95px, 16vw, 170px);
-  background-image: url('/images/about/rochos-face.png');
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: contain;
+.about-girl {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--footer-height) - clamp(70px, 11vw, 118px));
+  transform: translateX(-50%);
+  width: clamp(180px, 26vw, 300px);
+  height: auto;
+  z-index: 6;
+  pointer-events: none;
 }
 
 @media (max-width: 900px) {
   .about-main {
-    padding: 1.3rem 1rem 1rem;
-    gap: 0.9rem;
+    min-height: 58vh;
+    padding: 3.4rem 1rem 0;
+    grid-template-columns: minmax(0, 1fr) clamp(150px, 27vw, 210px);
   }
 
   .about-body-copy {
-    font-size: clamp(0.95rem, 2.8vw, 1.2rem);
-    max-width: 75%;
+    max-width: 100%;
+    font-size: clamp(0.94rem, 2.55vw, 1.16rem);
   }
 
   .about-red-strip,
@@ -219,95 +218,89 @@
     padding-right: 1rem;
   }
 
-  .about-words {
-    font-size: clamp(1.15rem, 4.3vw, 1.8rem);
-    min-height: 130px;
+  .about-red-strip {
+    min-height: 210px;
   }
 
-  .about-footer-brand {
-    font-size: 1.6rem;
+  .about-blue-panel {
+    min-height: 320px;
+    padding-bottom: 6.3rem;
+  }
+
+  .about-phylosophy-images {
+    gap: 1rem;
+  }
+
+  .about-girl {
+    width: clamp(160px, 31vw, 235px);
+    bottom: calc(var(--footer-height) - clamp(60px, 9.5vw, 98px));
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 680px) {
+  .about-layout {
+    --footer-height: 118px;
+  }
+
   .about-main {
-    flex-direction: column;
-    align-items: flex-start;
+    min-height: 56vh;
+    padding-top: 3.2rem;
+    grid-template-columns: 1fr;
   }
 
   .about-body-copy {
     max-width: 100%;
-    font-size: 0.98rem;
+    font-size: 0.95rem;
+  }
+
+  .about-main-media {
+    min-height: 170px;
+    margin-top: 0.35rem;
   }
 
   .about-bottle {
-    width: 118px;
-    height: 220px;
-    margin-right: 0;
-    align-self: center;
+    height: clamp(230px, 38vh, 320px);
+    width: auto;
+    bottom: -14%;
+  }
+
+  .about-red-strip {
+    min-height: 170px;
+    padding-top: 1.1rem;
   }
 
   .about-red-copy {
-    font-size: clamp(1.05rem, 6vw, 1.45rem);
+    font-size: clamp(1rem, 5.1vw, 1.38rem);
+    max-width: 92%;
   }
 
   .about-blue-panel {
-    min-height: 240px;
-    padding-top: 1.4rem;
+    min-height: 250px;
+    padding-top: 1.35rem;
+    padding-bottom: 4.9rem;
   }
 
-  .about-words {
-    min-height: 140px;
+  .about-phylosophy {
+    font-size: 1.5rem;
+  }
+
+  .about-phylosophy-images {
     margin-top: 1rem;
-  }
-
-  .about-words span:nth-child(1) {
-    left: 2%;
-    top: 18%;
-  }
-
-  .about-words span:nth-child(2) {
-    left: 6%;
-    top: 47%;
-  }
-
-  .about-words span:nth-child(3) {
-    left: 2%;
-    top: 72%;
-  }
-
-  .about-words span:nth-child(4) {
-    right: 4%;
-    top: 8%;
-  }
-
-  .about-words span:nth-child(5) {
-    right: 13%;
-    top: 40%;
-  }
-
-  .about-words span:nth-child(6) {
-    right: 6%;
-    top: 70%;
-  }
-
-  .about-footer-strip {
-    min-height: 95px;
-    align-items: center;
+    gap: 0.55rem;
   }
 
   .about-footer-brand {
-    margin-bottom: 0;
     font-size: 1.35rem;
+    gap: 0.3rem;
   }
 
-  .about-footer-star {
-    font-size: 1.55rem;
+  .about-footer-sol {
+    width: 29px;
   }
 
-  .about-footer-face {
-    width: 120px;
-    height: 80px;
+  .about-girl {
+    width: 155px;
+    bottom: calc(var(--footer-height) - 54px);
   }
 }
 </style>
