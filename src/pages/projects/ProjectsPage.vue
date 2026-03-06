@@ -7,24 +7,28 @@ const projectButtons = [
     label: 'photography',
     path: '/projects/photography',
     image: '/images/Carpetaamarilla .png',
+    hoverImage: '/images/solapacarpetamarilla.PNG',
   },
   {
     id: 'posters',
     label: 'posters',
     path: '/projects/posters',
     image: '/images/Carpetaazul .png',
+    hoverImage: '/images/solapacarpetaazul.PNG',
   },
   {
     id: 'branding-identity',
     label: 'branding and identity projects',
     path: '/projects/branding-identity',
     image: '/images/Carpetaroja .png',
+    hoverImage: '/images/solapacarpetaroja.PNG',
   },
   {
     id: 'typography-magazine',
     label: 'tipography and magazine works',
     path: '/projects/typography-magazine',
     image: '/images/Carpetaamarilla .png',
+    hoverImage: '/images/solapacarpetamarilla.PNG',
   },
 ]
 </script>
@@ -38,7 +42,10 @@ const projectButtons = [
         :to="button.path"
         class="project-button"
       >
-        <img :src="button.image" :alt="`Open ${button.label}`" class="project-button-image" />
+        <span class="project-button-visual">
+          <img :src="button.image" :alt="`Open ${button.label}`" class="project-button-image project-button-base" />
+          <img :src="button.hoverImage" alt="" aria-hidden="true" class="project-button-image project-button-hover" />
+        </span>
         <span class="project-button-label">{{ button.label }}</span>
       </RouterLink>
     </div>
@@ -67,10 +74,26 @@ const projectButtons = [
   text-decoration: none;
 }
 
+.project-button-visual {
+  position: relative;
+  display: inline-block;
+}
+
 .project-button-image {
   width: clamp(120px, 18vw, 170px);
   height: auto;
   transition: transform 0.2s ease;
+}
+
+.project-button-hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateY(0.2rem) scale(1);
+  transform-origin: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
 }
 
 .project-button-label {
@@ -82,7 +105,12 @@ const projectButtons = [
   text-align: left;
 }
 
-.project-button:hover .project-button-image {
+.project-button:hover .project-button-base {
   transform: scale(1.06);
+}
+
+.project-button:hover .project-button-hover {
+  opacity: 1;
+  transform: translateY(-0.1rem) scale(1.06);
 }
 </style>
