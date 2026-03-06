@@ -1,18 +1,45 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
 
-const activeCamera = ref<number | null>(null)
+type CameraId = 1 | 2 | 3 | 4
+
+const activeCamera = ref<CameraId | null>(null)
 const currentSlideIndex = ref(0)
 
-const firstCameraSlides = [
-  '/images/llamada3.png',
-  '/images/llamada.png',
-  '/images/niñagafas.PNG',
-]
+const cameraProjects = {
+  1: {
+    title: "mediterranean fashion week '25",
+    description:
+      'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
+    date: '21 de octubre de 2025.',
+    slides: ['/images/llamada3.png', '/images/llamada.png', '/images/niñagafas.PNG'],
+  },
+  2: {
+    title: "mediterranean fashion week '25",
+    description:
+      'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
+    date: '21 de octubre de 2025.',
+    slides: ['/images/llamada3.png', '/images/llamada.png', '/images/niñagafas.PNG'],
+  },
+  3: {
+    title: "mediterranean fashion week '25",
+    description:
+      'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
+    date: '21 de octubre de 2025.',
+    slides: ['/images/llamada3.png', '/images/llamada.png', '/images/niñagafas.PNG'],
+  },
+  4: {
+    title: "mediterranean fashion week '25",
+    description:
+      'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
+    date: '21 de octubre de 2025.',
+    slides: ['/images/llamada3.png', '/images/llamada.png', '/images/niñagafas.PNG'],
+  },
+} as const
 
 let autoplayTimer: number | null = null
 
-const handleCameraClick = (cameraId: number) => {
+const handleCameraClick = (cameraId: CameraId) => {
   activeCamera.value = activeCamera.value === cameraId ? null : cameraId
 }
 
@@ -20,15 +47,37 @@ const closeCameraPanel = () => {
   activeCamera.value = null
 }
 
-const currentFirstSlide = computed(() => firstCameraSlides[currentSlideIndex.value])
+const activeProject = computed(() => {
+  if (activeCamera.value === null) {
+    return null
+  }
+
+  return cameraProjects[activeCamera.value]
+})
+
+const currentSlide = computed(() => {
+  if (!activeProject.value) {
+    return ''
+  }
+
+  return activeProject.value.slides[currentSlideIndex.value]
+})
 
 const nextSlide = () => {
-  currentSlideIndex.value = (currentSlideIndex.value + 1) % firstCameraSlides.length
+  if (!activeProject.value) {
+    return
+  }
+
+  currentSlideIndex.value = (currentSlideIndex.value + 1) % activeProject.value.slides.length
 }
 
 const prevSlide = () => {
+  if (!activeProject.value) {
+    return
+  }
+
   currentSlideIndex.value =
-    (currentSlideIndex.value - 1 + firstCameraSlides.length) % firstCameraSlides.length
+    (currentSlideIndex.value - 1 + activeProject.value.slides.length) % activeProject.value.slides.length
 }
 
 const stopAutoplay = () => {
@@ -41,14 +90,14 @@ const stopAutoplay = () => {
 const startAutoplay = () => {
   stopAutoplay()
   autoplayTimer = window.setInterval(() => {
-    if (activeCamera.value === 1) {
+    if (activeCamera.value !== null) {
       nextSlide()
     }
   }, 3200)
 }
 
 watch(activeCamera, (cameraId) => {
-  if (cameraId === 1) {
+  if (cameraId !== null) {
     currentSlideIndex.value = 0
     startAutoplay()
     return
@@ -100,30 +149,25 @@ onBeforeUnmount(() => {
       </button>
     </div>
 
-    <section v-if="activeCamera === 1" class="photo-panel" @click.stop>
+    <section v-if="activeProject" class="photo-panel" @click.stop>
       <div class="photo-panel-content">
         <div class="photo-carousel">
           <button type="button" class="carousel-arrow" @click.stop="prevSlide" aria-label="Foto anterior">
             <span aria-hidden="true">&#8249;</span>
           </button>
-          <img :src="currentFirstSlide" alt="fotografia" class="carousel-image" />
+          <img :src="currentSlide" alt="fotografia" class="carousel-image" />
           <button type="button" class="carousel-arrow" @click.stop="nextSlide" aria-label="Foto siguiente">
             <span aria-hidden="true">&#8250;</span>
           </button>
         </div>
 
         <div class="photo-copy">
-          <h2 class="photo-title">mediterranean fashion week '25</h2>
-          <p class="photo-description">
-            He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr
-            guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta
-          </p>
-          <p class="photo-date">21 de octubre de 2025.</p>
+          <h2 class="photo-title">{{ activeProject.title }}</h2>
+          <p class="photo-description">{{ activeProject.description }}</p>
+          <p class="photo-date">{{ activeProject.date }}</p>
         </div>
       </div>
     </section>
-
-    <section v-else-if="activeCamera !== null" class="photo-panel" @click.stop />
   </section>
 </template>
 
