@@ -2,8 +2,8 @@
   <section class="about-layout min-h-[calc(100vh-90px)] sm:min-h-[calc(100vh-73px)]">
     <div class="about-top">
       <p class="about-top-copy">
-        <span>Only for cool people is much more than you think.</span>
-        <span>It's an identity. It's a way of seeing life.</span>
+        <span>Only for cool people it's an identity.</span>
+        <span>It's a way of seeing life.</span>
         <span>It's art.</span>
       </p>
     </div>
@@ -41,24 +41,34 @@
 }
 
 .about-top {
-  background: #fb1200;
+  background: #eb553f;
   display: flex;
   align-items: center;
   padding: 1.2rem 1rem;
 }
 
 .about-top-copy {
-  font-family: 'Instrument Serif', 'Times New Roman', serif;
-  font-style: italic;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 900;
   color: #ffffff;
   font-size: clamp(1.1rem, 1.9vw, 1.55rem);
   line-height: 1.15;
   max-width: min(calc(100% - var(--about-copy-reserve)), 760px);
+  margin-left: clamp(0.7rem, 2.6vw, 2rem);
   text-align: left;
 }
 
 .about-top-copy span {
   display: block;
+}
+
+.about-top-copy span:nth-child(-n + 2) {
+  transform: translateY(-0.22rem);
+}
+
+.about-top-copy span:nth-child(3) {
+  transform: translateY(0.35rem);
 }
 
 .about-top-copy span + span {
