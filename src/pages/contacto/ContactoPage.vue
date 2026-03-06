@@ -18,12 +18,12 @@ const handleSend = () => {
   <section class="min-h-[calc(100vh-73px)] w-full bg-[#f8f8f8]">
     <div class="mx-auto w-full max-w-[1400px] px-5 pt-5 pb-8 sm:px-6 sm:pt-6 sm:pb-10">
       <div class="grid gap-10 lg:grid-cols-[minmax(360px,1fr)_minmax(420px,610px)] lg:items-start">
-        <div class="flex min-h-[calc(100vh-125px)] flex-col">
+        <div class="flex flex-col lg:min-h-[680px]">
           <div>
             <p class="pl-0 font-['Helvetica_Neue'] text-[1.12rem] italic leading-tight text-black sm:text-[1.32rem]">
               Oh! I think they're calling you...
             </p>
-            <div class="relative mt-2 w-full max-w-[350px] sm:mt-3 sm:max-w-[420px]">
+            <div class="relative mt-2 -ml-2 w-full max-w-[350px] sm:mt-3 sm:-ml-3 sm:max-w-[420px]">
               <img
                 src="/images/llamada3.png"
                 alt="Ilustracion de llamada"
@@ -32,7 +32,7 @@ const handleSend = () => {
             </div>
           </div>
 
-          <div class="mt-auto pt-10">
+          <div class="mt-auto pt-4">
             <p class="font-['Helvetica_Neue'] text-[1.05rem] italic text-black sm:text-[1.2rem]">
               rociotorresgarcia6@gmail.com
             </p>
