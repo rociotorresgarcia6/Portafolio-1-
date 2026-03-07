@@ -42,7 +42,7 @@ const projectButtons = [
   },
   {
     id: 'branding-identity',
-    label: 'branding and identity projects',
+    label: 'branding and identity works',
     path: '/projects/branding-identity',
     image: '/images/Carpetaroja .png',
     hoverImage: '/images/solapacarpetaroja.PNG',
@@ -56,25 +56,6 @@ const projectButtons = [
         src: '/images/OBJ29.png',
         alt: 'branding object two',
         className: 'object-branding-right',
-      },
-    ],
-  },
-  {
-    id: 'typography-magazine',
-    label: 'tipography and magazine works',
-    path: '/projects/typography-magazine',
-    image: '/images/Carpetaamarilla .png',
-    hoverImage: '/images/solapacarpetamarilla.PNG',
-    objects: [
-      {
-        src: '/images/OBJ10.png',
-        alt: 'typography object one',
-        className: 'object-typography-left',
-      },
-      {
-        src: '/images/OBJ30.png',
-        alt: 'typography object two',
-        className: 'object-typography-right',
       },
     ],
   },
@@ -204,18 +185,6 @@ const projectButtons = [
   transform: translateY(0.45rem) rotate(8deg);
 }
 
-.object-typography-left {
-  left: 12%;
-  width: 52%;
-  transform: translateY(0.45rem) rotate(-7deg);
-}
-
-.object-typography-right {
-  left: 50%;
-  width: 45%;
-  transform: translateY(0.45rem) rotate(7deg);
-}
-
 .project-button-label {
   margin-top: -0.7rem;
   padding-left: 0.85rem;
@@ -274,11 +243,4 @@ const projectButtons = [
   transform: translateY(-0.05rem) rotate(8deg);
 }
 
-.project-button:hover .object-typography-left {
-  transform: translateY(-0.05rem) rotate(-7deg);
-}
-
-.project-button:hover .object-typography-right {
-  transform: translateY(-0.05rem) rotate(7deg);
-}
 </style>

@@ -4,7 +4,6 @@ import ContactoPage from '@/pages/contacto/ContactoPage.vue'
 import Home from '@/pages/home/Home.vue'
 import BrandingIdentityPage from '@/pages/projects/BrandingIdentityPage.vue'
 import ProjectsPage from '@/pages/projects/ProjectsPage.vue'
-import TypographyMagazinePage from '@/pages/projects/TypographyMagazinePage.vue'
 import PhotographyPage from '@/pages/photography/PhotographyPage.vue'
 import PostersPage from '@/pages/posters/PostersPage.vue'
 import ProjectDetailPage from '@/pages/detalle/ProjectDetailPage.vue'
@@ -41,11 +40,6 @@ export const router = createRouter({
           path: 'projects/branding-identity',
           name: 'projects-branding-identity',
           component: BrandingIdentityPage,
-        },
-        {
-          path: 'projects/typography-magazine',
-          name: 'projects-typography-magazine',
-          component: TypographyMagazinePage,
         },
         {
           path: 'projects/:id',

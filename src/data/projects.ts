@@ -1,4 +1,4 @@
-export type ProjectCategory = 'posters' | 'photography' | 'branding-identity' | 'typography-magazine'
+export type ProjectCategory = 'posters' | 'photography' | 'branding-identity'
 
 export interface ProjectItem {
   id: string
@@ -36,12 +36,6 @@ export const projectCategories: ProjectCategoryItem[] = [
     title: 'Branding and Identity',
     description: 'Sistemas de marca, logotipos y aplicaciones graficas.',
     path: '/projects/branding-identity',
-  },
-  {
-    id: 'typography-magazine',
-    title: 'Typography and Magazine',
-    description: 'Diseno tipografico, composicion y direccion de arte editorial.',
-    path: '/projects/typography-magazine',
   },
 ]
 
@@ -102,25 +96,6 @@ export const projects: ProjectItem[] = [
     tool: 'Illustrator + After Effects',
     summary: 'Logotipo, packaging y piezas de lanzamiento para redes.',
     image: '/images/OBJ17.png',
-  },
-  {
-    id: 'radical-grid',
-    title: 'Radical Grid Magazine',
-    category: 'typography-magazine',
-    year: '2025',
-    tool: 'InDesign + Photoshop',
-    summary: 'Diseno editorial de 48 paginas con foco en ritmo tipografico.',
-    image: '/images/Abueladedo.PNG',
-    featured: true,
-  },
-  {
-    id: 'type-study-01',
-    title: 'Type Study 01',
-    category: 'typography-magazine',
-    year: '2024',
-    tool: 'Glyphs + Illustrator',
-    summary: 'Exploracion de lettering y composicion para portada.',
-    image: '/images/home/abueladedo.png',
   },
 ]
 
