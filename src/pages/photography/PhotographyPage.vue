@@ -8,62 +8,64 @@ const currentSlideIndex = ref(0)
 
 const cameraProjects = {
   1: {
-    title: 'sobrevive a la vida!',
+    title: "mediterranean fashion week '25",
     description:
       'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
     date: '21 de octubre de 2025.',
     slides: [
-      '/images/sobrevive a la vida/IMG_7745.JPG',
-      '/images/sobrevive a la vida/IMG_7634.JPG',
-      '/images/sobrevive a la vida/IMG_7646.JPG',
-      '/images/sobrevive a la vida/23.png',
-      '/images/sobrevive a la vida/24.png',
-      '/images/sobrevive a la vida/IMG_7661.JPG',
-      '/images/sobrevive a la vida/25.png',
+      '/images/mfw/DSC02422.JPG',
+      '/images/mfw/DSC02426.JPG',
+      '/images/mfw/DSC02449.JPG',
+      '/images/mfw/DSC02455.JPG',
+      '/images/mfw/DSC02456.JPG',
+      '/images/mfw/DSC02463.JPG',
+      '/images/mfw/DSC02477.JPG',
     ],
   },
   2: {
-    title: 'lo que nos jode nos une',
+    title: "clec fashion festival '25",
     description:
       'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
     date: '21 de octubre de 2025.',
     slides: [
-      '/images/lo que nos jode nos une/Mockup_Poster_mockupgratis copia.png',
-      '/images/lo que nos jode nos une/Elegant Phone Mockup Design Catalog Instagram Post copia.png',
-      '/images/lo que nos jode nos une/mockup mupi 4 copia.png',
-      '/images/lo que nos jode nos une/Mockup Folleto portada y parte de atrás copia.png',
-      '/images/lo que nos jode nos une/Post de Instagram Compartir Publicación Redes Sociales Moderno Minimalista Azul Verde (1) copia.png',
-      '/images/lo que nos jode nos une/mockup cartel 2 copia.png',
-      '/images/lo que nos jode nos une/mockup mupi 3 copia.png',
-      '/images/lo que nos jode nos une/mockup cartel copia.png',
+      '/images/clec/DSC02610.JPG',
+      '/images/clec/DSC02642.JPG',
+      '/images/clec/DSC02651.JPG',
+      '/images/clec/DSC02673.JPG',
+      '/images/clec/DSC02703.JPG',
+      '/images/clec/DSC02713.JPG',
     ],
   },
   3: {
-    title: 'crefad 2026',
+    title: "koopey pop up '25",
     description:
       'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
     date: '21 de octubre de 2025.',
     slides: [
-      '/images/crefad/WhatsApp Image 2025-11-24 at 19.10.51.jpeg',
-      '/images/crefad/gif-mockup-1 (arrastrado).tiff',
-      '/images/crefad/WhatsApp Image 2025-11-24 at 19.09.37.jpeg',
-      '/images/crefad/gif-mockup-3 (arrastrado).tiff',
-      '/images/crefad/WhatsApp Image 2025-11-24 at 19.10.22.jpeg',
+      '/images/koopey pop up/IMG_0016.JPG',
+      '/images/koopey pop up/IMG_0349.JPG',
+      '/images/koopey pop up/IMG_9818.JPG',
+      '/images/koopey pop up/IMG_9889.JPG',
+      '/images/koopey pop up/IMG_9919.JPG',
+      '/images/koopey pop up/IMG_9922.JPG',
     ],
   },
   4: {
-    title: 'aureo chocolates',
+    title: 'urban life and others',
     description:
       'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
     date: '21 de octubre de 2025.',
     slides: [
-      '/images/chocolate/29.png',
-      '/images/chocolate/16.png',
-      '/images/chocolate/13.png',
-      '/images/chocolate/23.png',
-      '/images/chocolate/27.png',
-      '/images/chocolate/32.png',
-      '/images/chocolate/19.png',
+      '/images/otros/1f1bacd3-1e9c-4c87-ab3b-26edf662048d.jpg',
+      '/images/otros/2eacb691-6e24-4d3d-96e3-0133ec08c9a2.jpg',
+      '/images/otros/797d1aa1-da9c-4c0c-bd4a-0bf16343b398.jpg',
+      '/images/otros/DSCN1561.JPG',
+      '/images/otros/DSCN1572.JPG',
+      '/images/otros/IMG_7661.JPG',
+      '/images/otros/IMG_7695.JPG',
+      '/images/otros/IMG_7776.JPG',
+      '/images/otros/IMG_7847.JPG',
+      '/images/otros/acfa47db-7fda-445b-83f9-e9589a2697d1.jpg',
     ],
   },
 } as const
@@ -152,11 +154,7 @@ onBeforeUnmount(() => {
         :class="{ 'is-open': activeCamera === 1 }"
         @click.stop="handleCameraClick(1)"
       >
-        <img
-          src="/images/sobrevive a la vida/sobrevivealavidaboton.png"
-          alt="sobrevive a la vida boton"
-          class="camera-image camera-image-large"
-        />
+        <img src="/images/cámara2.png" alt="camara 2" class="camera-image" />
       </button>
       <button
         type="button"
@@ -164,11 +162,7 @@ onBeforeUnmount(() => {
         :class="{ 'is-open': activeCamera === 2 }"
         @click.stop="handleCameraClick(2)"
       >
-        <img
-          src="/images/lo que nos jode nos une/loquenosjodenosuneboton2.png"
-          alt="lo que nos jode nos une boton"
-          class="camera-image camera-image-small"
-        />
+        <img src="/images/camara4.png" alt="camara 4" class="camera-image" />
       </button>
       <button
         type="button"
@@ -176,7 +170,7 @@ onBeforeUnmount(() => {
         :class="{ 'is-open': activeCamera === 3 }"
         @click.stop="handleCameraClick(3)"
       >
-        <img src="/images/crefad/crefadboton.png" alt="crefad boton" class="camera-image camera-image-large" />
+        <img src="/images/cámara1.png" alt="camara 1" class="camera-image" />
       </button>
       <button
         type="button"
@@ -184,7 +178,7 @@ onBeforeUnmount(() => {
         :class="{ 'is-open': activeCamera === 4 }"
         @click.stop="handleCameraClick(4)"
       >
-        <img src="/images/chocolate/chocolatesboton.png" alt="chocolate boton" class="camera-image camera-image-large" />
+        <img src="/images/camara3.png" alt="camara 3" class="camera-image" />
       </button>
     </div>
 
@@ -240,20 +234,10 @@ onBeforeUnmount(() => {
 }
 
 .camera-image {
-  width: 16vw;
-  max-width: 240px;
-  height: auto;
-  object-fit: contain;
-}
-
-.camera-image-large {
-  width: 19vw;
-  max-width: 300px;
-}
-
-.camera-image-small {
   width: 12vw;
   max-width: 180px;
+  height: auto;
+  object-fit: contain;
 }
 
 .camera-trigger {

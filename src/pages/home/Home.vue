@@ -220,9 +220,7 @@ onBeforeUnmount(() => {
         <p class="cool-word cool-word--left">ONLY</p>
         <p class="cool-word cool-word--right">FOR</p>
         <p class="cool-word cool-word--left">COOL</p>
-        <p class="cool-word cool-word--right">
-          P<span class="script-e script-e--first">E</span>OPL<span class="script-e script-e--last">E</span>
-        </p>
+        <p class="cool-word cool-word--right">PEOPLE</p>
       </div>
     </section>
   </section>
