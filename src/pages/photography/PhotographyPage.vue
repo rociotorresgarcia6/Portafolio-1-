@@ -23,17 +23,19 @@ const cameraProjects = {
     ],
   },
   2: {
-    title: "clec fashion festival '25",
+    title: 'lo que nos jode nos une',
     description:
       'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
     date: '21 de octubre de 2025.',
     slides: [
-      '/images/clec/DSC02610.JPG',
-      '/images/clec/DSC02642.JPG',
-      '/images/clec/DSC02651.JPG',
-      '/images/clec/DSC02673.JPG',
-      '/images/clec/DSC02703.JPG',
-      '/images/clec/DSC02713.JPG',
+      '/images/lo que nos jode nos une/Mockup_Poster_mockupgratis copia.png',
+      '/images/lo que nos jode nos une/Elegant Phone Mockup Design Catalog Instagram Post copia.png',
+      '/images/lo que nos jode nos une/mockup mupi 4 copia.png',
+      '/images/lo que nos jode nos une/Mockup Folleto portada y parte de atrás copia.png',
+      '/images/lo que nos jode nos une/Post de Instagram Compartir Publicación Redes Sociales Moderno Minimalista Azul Verde (1) copia.png',
+      '/images/lo que nos jode nos une/mockup cartel 2 copia.png',
+      '/images/lo que nos jode nos une/mockup mupi 3 copia.png',
+      '/images/lo que nos jode nos une/mockup cartel copia.png',
     ],
   },
   3: {
