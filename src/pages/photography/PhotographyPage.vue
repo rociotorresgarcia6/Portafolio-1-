@@ -8,18 +8,18 @@ const currentSlideIndex = ref(0)
 
 const cameraProjects = {
   1: {
-    title: "mediterranean fashion week '25",
+    title: 'sobrevive a la vida!',
     description:
       'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
     date: '21 de octubre de 2025.',
     slides: [
-      '/images/mfw/DSC02422.JPG',
-      '/images/mfw/DSC02426.JPG',
-      '/images/mfw/DSC02449.JPG',
-      '/images/mfw/DSC02455.JPG',
-      '/images/mfw/DSC02456.JPG',
-      '/images/mfw/DSC02463.JPG',
-      '/images/mfw/DSC02477.JPG',
+      '/images/sobrevive a la vida/IMG_7745.JPG',
+      '/images/sobrevive a la vida/IMG_7634.JPG',
+      '/images/sobrevive a la vida/IMG_7646.JPG',
+      '/images/sobrevive a la vida/23.png',
+      '/images/sobrevive a la vida/24.png',
+      '/images/sobrevive a la vida/IMG_7661.JPG',
+      '/images/sobrevive a la vida/25.png',
     ],
   },
   2: {
@@ -154,7 +154,11 @@ onBeforeUnmount(() => {
         :class="{ 'is-open': activeCamera === 1 }"
         @click.stop="handleCameraClick(1)"
       >
-        <img src="/images/cámara2.png" alt="camara 2" class="camera-image" />
+        <img
+          src="/images/sobrevive a la vida/sobrevivealavidaboton.png"
+          alt="sobrevive a la vida boton"
+          class="camera-image camera-image-large"
+        />
       </button>
       <button
         type="button"
@@ -162,7 +166,11 @@ onBeforeUnmount(() => {
         :class="{ 'is-open': activeCamera === 2 }"
         @click.stop="handleCameraClick(2)"
       >
-        <img src="/images/camara4.png" alt="camara 4" class="camera-image" />
+        <img
+          src="/images/lo que nos jode nos une/loquenosjodenosuneboton2.png"
+          alt="lo que nos jode nos une boton"
+          class="camera-image camera-image-small"
+        />
       </button>
       <button
         type="button"
@@ -170,7 +178,7 @@ onBeforeUnmount(() => {
         :class="{ 'is-open': activeCamera === 3 }"
         @click.stop="handleCameraClick(3)"
       >
-        <img src="/images/cámara1.png" alt="camara 1" class="camera-image" />
+        <img src="/images/crefad/crefadboton.png" alt="crefad boton" class="camera-image camera-image-large" />
       </button>
       <button
         type="button"
@@ -178,7 +186,7 @@ onBeforeUnmount(() => {
         :class="{ 'is-open': activeCamera === 4 }"
         @click.stop="handleCameraClick(4)"
       >
-        <img src="/images/camara3.png" alt="camara 3" class="camera-image" />
+        <img src="/images/chocolate/chocolatesboton.png" alt="chocolate boton" class="camera-image camera-image-large" />
       </button>
     </div>
 
@@ -234,10 +242,20 @@ onBeforeUnmount(() => {
 }
 
 .camera-image {
-  width: 12vw;
-  max-width: 180px;
+  width: 16vw;
+  max-width: 240px;
   height: auto;
   object-fit: contain;
+}
+
+.camera-image-large {
+  width: 19vw;
+  max-width: 300px;
+}
+
+.camera-image-small {
+  width: 12vw;
+  max-width: 180px;
 }
 
 .camera-trigger {
