@@ -316,7 +316,7 @@ onBeforeUnmount(() => {
   width: 100%;
   height: clamp(340px, 45vw, 560px);
   object-fit: contain;
-  background-color: #f5f1ea;
+  background-color: transparent;
   border-radius: 10px;
   justify-self: center;
 }
