@@ -10,7 +10,7 @@ const cameraProjects = {
   1: {
     title: "mediterranean fashion week '25",
     description:
-      'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
+      'Photographic series created during Mediterranean Fashion Week Valencia 2025, documenting runway moments, collection details, and the atmosphere surrounding the event. The images capture the rhythm and visual identity of a contemporary fashion show.',
     date: '21 de octubre de 2025.',
     slides: [
       '/images/mfw/DSC02422.JPG',
@@ -25,7 +25,7 @@ const cameraProjects = {
   2: {
     title: "clec fashion festival '25",
     description:
-      'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
+      'Photographic coverage produced during two days of CLEC Fashion Festival 2025, capturing runway shows, designers, and the creative atmosphere of the event.',
     date: '21 de octubre de 2025.',
     slides: [
       '/images/clec/DSC02610.JPG',
@@ -39,7 +39,7 @@ const cameraProjects = {
   3: {
     title: "koopey pop up '25",
     description:
-      'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
+      'Event photography created for Koopey Pop-Up 25, documenting the launch of the brand’s summer collection and the vibrant atmosphere of the event.',
     date: '21 de octubre de 2025.',
     slides: [
       '/images/koopey pop up/IMG_0016.JPG',
@@ -53,7 +53,7 @@ const cameraProjects = {
   4: {
     title: 'urban life and others',
     description:
-      'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
+      'A photographic series capturing urban scenes, landscapes, and everyday moments in cities such as Paris, Valencia, and Rome.',
     date: '21 de octubre de 2025.',
     slides: [
       '/images/otros/1f1bacd3-1e9c-4c87-ab3b-26edf662048d.jpg',
@@ -339,7 +339,7 @@ onBeforeUnmount(() => {
 .photo-description {
   margin: 0.9rem 0 0;
   padding-left: var(--carousel-side-offset);
-  max-width: min(52ch, 56%);
+  max-width: min(78ch, 74%);
   font-family: Helvetica, Arial, sans-serif;
   font-style: oblique;
   font-size: 0.72rem;
