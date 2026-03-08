@@ -10,7 +10,7 @@ const cameraProjects = {
   1: {
     title: 'sobrevive a la vida!',
     description:
-      'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
+      'A board game project designed to encourage conversations about mental health among young people through dialogue and interactive gameplay. The project included the full development of the game concept and the design of all its elements, including packaging, cards, dice, tokens, board, and a photographic series.',
     date: '21 de octubre de 2025.',
     slides: [
       '/images/sobrevive a la vida/IMG_7745.JPG',
@@ -25,7 +25,7 @@ const cameraProjects = {
   2: {
     title: 'lo que nos jode nos une',
     description:
-      'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
+      'A marketing campaign aimed at strengthening relationships between younger and older generations, approaching the topic from a realistic perspective and avoiding clichés or paternalistic narratives. The project included a commercial spot, reels, posters, billboards, a brochure, and an Instagram post.',
     date: '21 de octubre de 2025.',
     slides: [
       '/images/lo que nos jode nos une/Mockup_Poster_mockupgratis copia.png',
@@ -41,7 +41,7 @@ const cameraProjects = {
   3: {
     title: 'crefad 2026',
     description:
-      'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
+      'Visual identity design for CREFAD 2026, the Ibero-American Congress on Digital Creation and Fabrication. The project focused on the development of a graphic system applied to a series of event posters.',
     date: '21 de octubre de 2025.',
     slides: [
       '/images/crefad/WhatsApp Image 2025-11-24 at 19.10.51.jpeg',
@@ -54,7 +54,7 @@ const cameraProjects = {
   4: {
     title: 'aureo chocolates',
     description:
-      'He realizaado estas foto en no se donde y fue una experiencia no se que mas fue suepr guaychipiruli esyoy nerviosa jejej quiero acabar ya estoy hasta',
+      'Visual identity design for CREADA 2026, the Ibero-American Congress on Digital Creation and Fabrication. The project focused on the development of a graphic system applied to a series of event posters.',
     date: '21 de octubre de 2025.',
     slides: [
       '/images/chocolate/29.png',
