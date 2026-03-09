@@ -40,19 +40,19 @@
       <div class="about-professional-grid">
         <article class="about-professional-card">
           <h3>studies</h3>
-          <p>Higher Vocational Training in Graphic Design.</p>
-          <p>Projects focused on branding, editorial design, photography and web.</p>
+          <p>Design and Creative Technologies student at UPV.</p>
+          <p>Additional training in photography and art direction to expand my creative skills.</p>
         </article>
 
         <article class="about-professional-card">
           <h3>skills</h3>
-          <p>Adobe Illustrator, Photoshop, InDesign and Lightroom.</p>
-          <p>Visual identity systems, poster design, layout, and creative direction.</p>
+          <p>Proficient in: Photoshop, Illustrator, InDesign, and Procreate.</p>
+          <p>Learning: Blender, After Effects, Visual Studio Code, and Premiere.</p>
         </article>
 
         <article class="about-professional-card">
           <h3>extra</h3>
-          <p>Languages: Spanish (native), English (working level).</p>
+          <p>Languages: Spanish (native), English (B2), Valencian (C1), learning Italian.</p>
           <p>Open to freelance collaborations, internships and creative projects.</p>
         </article>
       </div>
