@@ -34,6 +34,29 @@
         <img src="/images/filosofia2.PNG" alt="Filosofia derecha" class="about-phylosophy-image" />
       </div>
     </div>
+
+    <div class="about-professional">
+      <h2 class="about-professional-title">professional info</h2>
+      <div class="about-professional-grid">
+        <article class="about-professional-card">
+          <h3>studies</h3>
+          <p>Higher Vocational Training in Graphic Design.</p>
+          <p>Projects focused on branding, editorial design, photography and web.</p>
+        </article>
+
+        <article class="about-professional-card">
+          <h3>skills</h3>
+          <p>Adobe Illustrator, Photoshop, InDesign and Lightroom.</p>
+          <p>Visual identity systems, poster design, layout, and creative direction.</p>
+        </article>
+
+        <article class="about-professional-card">
+          <h3>extra</h3>
+          <p>Languages: Spanish (native), English (working level).</p>
+          <p>Open to freelance collaborations, internships and creative projects.</p>
+        </article>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -155,6 +178,53 @@
   justify-self: end;
 }
 
+.about-professional {
+  background: #ff4938;
+  padding: 2.2rem 1.6rem 3.2rem;
+}
+
+.about-professional-title {
+  margin: 0;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-style: normal;
+  font-size: clamp(1.5rem, 2.3vw, 2.1rem);
+  color: #fff;
+}
+
+.about-professional-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-professional-card {
+  background: #fff;
+  padding: 0.9rem 1rem;
+  min-height: 160px;
+  border-radius: 10px;
+}
+
+.about-professional-card h3 {
+  margin: 0 0 0.65rem;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  text-transform: lowercase;
+}
+
+.about-professional-card p {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: oblique;
+  font-size: 0.94rem;
+  line-height: 1.28;
+}
+
+.about-professional-card p + p {
+  margin-top: 0.5rem;
+}
+
 @media (max-width: 900px) {
   .about-main {
     min-height: 58vh;
@@ -169,6 +239,7 @@
 
   .about-red-strip,
   .about-blue-panel,
+  .about-professional,
   .about-footer-strip {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -185,6 +256,11 @@
 
   .about-phylosophy-images {
     gap: 1.4rem;
+  }
+
+  .about-professional-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
 }
 
