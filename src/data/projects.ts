@@ -4,6 +4,7 @@ export interface ProjectItem {
   id: string
   title: string
   category: ProjectCategory
+  categoryLabel?: string
   year: string
   tool: string
   summary: string
@@ -48,7 +49,6 @@ export const projects: ProjectItem[] = [
     tool: 'Lightroom + Fujifilm XT-30',
     summary: 'Serie de retratos urbanos con luz dura y contraste alto.',
     image: '/images/OBJ30.png',
-    featured: true,
   },
   {
     id: 'night-shapes',
@@ -60,6 +60,16 @@ export const projects: ProjectItem[] = [
     image: '/images/OBJ29.png',
   },
   {
+    id: 'mediterranean-fashion-week',
+    title: 'Mediterranean Fashion Week',
+    category: 'photography',
+    year: '2025',
+    tool: 'Canon + Photoshop + Lightroom',
+    summary: "Runway photo session for MFW '25 in Valencia.",
+    image: '/images/mfw/mfw4.png',
+    featured: true,
+  },
+  {
     id: 'neon-festival-poster',
     title: 'Neon Festival Poster',
     category: 'posters',
@@ -67,7 +77,6 @@ export const projects: ProjectItem[] = [
     tool: 'Illustrator + Photoshop',
     summary: 'Cartel principal y adaptaciones para campana digital.',
     image: '/images/Parental advisory.PNG',
-    featured: true,
   },
   {
     id: 'sonic-series',
@@ -79,6 +88,27 @@ export const projects: ProjectItem[] = [
     image: '/images/home/parental-advisory.png',
   },
   {
+    id: 'lo-que-nos-jode-nos-une',
+    title: 'Lo que nos jode nos une',
+    category: 'branding-identity',
+    categoryLabel: 'Advertising campaign',
+    year: '2025',
+    tool: 'Illustrator + Photoshop + Premiere + After Effects + InDesign + Others',
+    summary: 'Advertising campaign about relationships between young and older people.',
+    image: '/images/lo que nos jode nos une/Mockup_Poster_mockupgratis copia.png',
+    featured: true,
+  },
+  {
+    id: 'crefad-2026',
+    title: 'CREFAD 2026',
+    category: 'branding-identity',
+    year: '2025',
+    tool: 'Illustrator + Photoshop',
+    summary: 'Sistema grafico para congreso iberoamericano y serie de posters.',
+    image: '/images/crefad/WhatsApp Image 2025-11-24 at 19.10.51.jpeg',
+    featured: true,
+  },
+  {
     id: 'marea-brand-kit',
     title: 'Marea Brand Kit',
     category: 'branding-identity',
@@ -86,7 +116,6 @@ export const projects: ProjectItem[] = [
     tool: 'Illustrator + Figma',
     summary: 'Identidad visual completa para estudio creativo emergente.',
     image: '/images/OBJ11.png',
-    featured: true,
   },
   {
     id: 'sola-cafe-identity',

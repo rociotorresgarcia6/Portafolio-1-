@@ -86,6 +86,7 @@ const projectButtons = [
         <span class="project-button-label">{{ button.label }}</span>
       </RouterLink>
     </div>
+
   </section>
 </template>
 

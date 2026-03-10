@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { Instagram, Mail, Phone } from 'lucide-vue-next'
 
 const companyName = ref('')
 const email = ref('')
@@ -33,13 +34,16 @@ const handleSend = () => {
           </div>
 
           <div class="mt-auto pt-4">
-            <p class="font-['Helvetica_Neue'] text-[1.05rem] italic text-black sm:text-[1.2rem]">
+            <p class="flex items-center gap-2 font-['Helvetica_Neue'] text-[1.05rem] italic text-black sm:text-[1.2rem]">
+              <Mail class="size-4 sm:size-5" aria-hidden="true" />
               rociotorresgarcia6@gmail.com
             </p>
-            <p class="mt-3 font-['Helvetica_Neue'] text-[1.05rem] italic text-black sm:text-[1.2rem]">
+            <p class="mt-3 flex items-center gap-2 font-['Helvetica_Neue'] text-[1.05rem] italic text-black sm:text-[1.2rem]">
+              <Instagram class="size-4 sm:size-5" aria-hidden="true" />
               rochos___
             </p>
-            <p class="mt-3 font-['Helvetica_Neue'] text-[1.05rem] italic text-black sm:text-[1.2rem]">
+            <p class="mt-3 flex items-center gap-2 font-['Helvetica_Neue'] text-[1.05rem] italic text-black sm:text-[1.2rem]">
+              <Phone class="size-4 sm:size-5" aria-hidden="true" />
               610392725
             </p>
           </div>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import ProjectCarousel from '@/components/portfolio/ProjectCarousel.vue'
 
 type PhysicsObject = {
   id: string
@@ -188,39 +189,50 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <section class="home-page">
-    <section class="hero-section">
-      <div class="title-block">
-        <h1 class="title-wrap">
-          <span class="welcome-title">welcome to</span>
-          <span class="brand-title">rochos</span>
+  <section class="home-page w-full">
+    <section class="hero-section relative flex min-h-[calc(100vh-73px)] flex-col overflow-hidden bg-[#6ec6ff]">
+      <div class="title-block relative z-20 flex flex-1 items-center justify-center px-4 py-6 sm:px-6">
+        <h1 class="title-wrap flex flex-col items-start leading-none">
+          <span class="welcome-title font-bold text-white">welcome to</span>
+          <span class="brand-title text-white">rochos</span>
         </h1>
       </div>
 
-      <div class="ticker" aria-label="only for cool people marquee">
-        <div class="ticker-track">
-          <span class="ticker-text tk-eurostile-extended">only for cool people</span>
-          <span class="ticker-text tk-eurostile-extended">only for cool people</span>
-          <span class="ticker-text tk-eurostile-extended">only for cool people</span>
-          <span class="ticker-text tk-eurostile-extended">only for cool people</span>
-          <span class="ticker-text tk-eurostile-extended">only for cool people</span>
-          <span class="ticker-text tk-eurostile-extended">only for cool people</span>
+      <div class="ticker relative flex h-[clamp(3.3rem,7.2vw,4.4rem)] items-center overflow-hidden bg-black" aria-label="only for cool people marquee">
+        <div class="ticker-track flex w-max whitespace-nowrap">
+          <span class="ticker-text tk-eurostile-extended font-black italic lowercase text-[#e6df43]">only for cool people</span>
+          <span class="ticker-text tk-eurostile-extended font-black italic lowercase text-[#e6df43]">only for cool people</span>
+          <span class="ticker-text tk-eurostile-extended font-black italic lowercase text-[#e6df43]">only for cool people</span>
+          <span class="ticker-text tk-eurostile-extended font-black italic lowercase text-[#e6df43]">only for cool people</span>
+          <span class="ticker-text tk-eurostile-extended font-black italic lowercase text-[#e6df43]">only for cool people</span>
+          <span class="ticker-text tk-eurostile-extended font-black italic lowercase text-[#e6df43]">only for cool people</span>
         </div>
       </div>
     </section>
 
-    <section ref="coolSection" class="cool-block" aria-label="only for cool people section" @mousemove="onCoolMouseMove" @mouseleave="onCoolMouseLeave">
-      <div v-if="objectsActive" class="obj-layer">
-        <div v-for="item in physicsObjects" :key="item.id" class="obj-sprite" :style="objectPhysicsStyle(item)">
-          <img :src="item.src" :alt="item.alt" class="obj-item" />
+    <section
+      ref="coolSection"
+      class="cool-block relative flex min-h-[calc(100vh-73px)] items-center justify-center overflow-hidden bg-[#eb553f] px-4 py-8"
+      aria-label="only for cool people section"
+      @mousemove="onCoolMouseMove"
+      @mouseleave="onCoolMouseLeave"
+    >
+      <div v-if="objectsActive" class="obj-layer pointer-events-none absolute inset-0 z-10">
+        <div v-for="item in physicsObjects" :key="item.id" class="obj-sprite absolute grid place-items-center" :style="objectPhysicsStyle(item)">
+          <img :src="item.src" :alt="item.alt" class="obj-item block h-full w-full select-none object-contain" />
         </div>
       </div>
 
-      <div class="cool-title-grid">
-        <p class="cool-word cool-word--left">ONLY</p>
-        <p class="cool-word cool-word--right">FOR</p>
-        <p class="cool-word cool-word--left">COOL</p>
-        <p class="cool-word cool-word--right">PEOPLE</p>
+      <div class="cool-title-grid relative z-20 grid grid-cols-2 content-center justify-items-start gap-x-[clamp(3rem,8vw,9rem)] gap-y-[clamp(0.7rem,1.6vw,1.5rem)]">
+        <p class="cool-word cool-word--left m-0 uppercase text-white">ONLY</p>
+        <p class="cool-word cool-word--right m-0 uppercase text-white">FOR</p>
+        <p class="cool-word cool-word--left m-0 uppercase text-white">COOL</p>
+        <p class="cool-word cool-word--right m-0 uppercase text-white">PEOPLE</p>
+      </div>
+    </section>
+    <section class="featured-section bg-[#f8f8f8] px-4 py-12 sm:px-6 sm:py-16">
+      <div class="mx-auto w-full max-w-6xl">
+        <ProjectCarousel />
       </div>
     </section>
   </section>

@@ -14,7 +14,7 @@ const transformValue = computed(() => `translateX(-${currentIndex.value * 100}%)
 <template>
   <section class="space-y-4">
     <div class="flex items-center justify-between">
-      <h2 class="font-display text-2xl font-black sm:text-3xl">Proyectos destacados</h2>
+      <h2 class="font-['Arial_Black',Arial,sans-serif] text-xl sm:text-2xl">Proyectos destacados</h2>
       <div class="flex items-center gap-2">
         <Button variant="outline" size="icon" :disabled="!canGoPrev" @click="goPrev">
           <ChevronLeft />
@@ -30,10 +30,14 @@ const transformValue = computed(() => `translateX(-${currentIndex.value * 100}%)
         <article v-for="project in featuredProjects" :key="project.id" class="w-full shrink-0">
           <img :src="project.image" :alt="project.title" class="h-72 w-full object-cover sm:h-96" />
           <div class="space-y-3 p-5 sm:p-6">
-            <p class="text-xs uppercase tracking-wide text-slate-600">{{ project.category }} · {{ project.year }}</p>
-            <h3 class="text-xl font-semibold">{{ project.title }}</h3>
-            <p class="text-sm text-slate-600">{{ project.summary }}</p>
-            <Button as-child>
+            <p class="text-xs uppercase tracking-wide text-slate-600">
+              {{ project.categoryLabel ?? project.category }} · {{ project.year }}
+            </p>
+            <h3 class="font-['Arial_Black',Arial,sans-serif] text-xl">{{ project.title }}</h3>
+            <p class="font-['Helvetica_Neue',Helvetica,Arial,sans-serif] text-sm italic text-slate-600">
+              {{ project.summary }}
+            </p>
+            <Button as-child class="rounded-full">
               <RouterLink :to="`/projects/${project.id}`">Ver detalle</RouterLink>
             </Button>
           </div>
