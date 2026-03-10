@@ -45,9 +45,9 @@ const cameraProjects = {
     date: '21 de octubre de 2025.',
     slides: [
       '/images/crefad/WhatsApp Image 2025-11-24 at 19.10.51.jpeg',
-      '/images/crefad/gif-mockup-1 (arrastrado).tiff',
+      '/images/crefad/gif-mockup-1 (arrastrado).jpg',
       '/images/crefad/WhatsApp Image 2025-11-24 at 19.09.37.jpeg',
-      '/images/crefad/gif-mockup-3 (arrastrado).tiff',
+      '/images/crefad/gif-mockup-3 (arrastrado).jpg',
       '/images/crefad/WhatsApp Image 2025-11-24 at 19.10.22.jpeg',
     ],
   },
