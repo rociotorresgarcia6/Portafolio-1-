@@ -100,12 +100,12 @@ export const projects: ProjectItem[] = [
   },
   {
     id: 'crefad-2026',
-    title: 'CREFAD 2026',
+    title: 'Crefad 2026',
     category: 'branding-identity',
-    year: '2025',
-    tool: 'Illustrator + Photoshop',
-    summary: 'Sistema grafico para congreso iberoamericano y serie de posters.',
-    image: '/images/crefad/WhatsApp Image 2025-11-24 at 19.10.51.jpeg',
+    year: '2026',
+    tool: 'Illustrator + InDesign + Photoshop',
+    summary: 'Visual identity and posters for the 1st Ibero-American Congress of Digital Creation and Fabrication.',
+    image: '/images/crefad/WhatsApp Image 2025-11-24 at 19.10.22.jpeg',
     featured: true,
   },
   {
