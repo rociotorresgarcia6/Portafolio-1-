@@ -13,13 +13,13 @@ const cameraProjects = {
       'Photographic series created during Mediterranean Fashion Week Valencia 2025, documenting runway moments, collection details, and the atmosphere surrounding the event. The images capture the rhythm and visual identity of a contemporary fashion show.',
     date: '21 de octubre de 2025.',
     slides: [
-      '/images/mfw/DSC02422.JPG',
-      '/images/mfw/DSC02426.JPG',
-      '/images/mfw/DSC02449.JPG',
-      '/images/mfw/DSC02455.JPG',
-      '/images/mfw/DSC02456.JPG',
-      '/images/mfw/DSC02463.JPG',
-      '/images/mfw/DSC02477.JPG',
+      '/images/mfw/mfw2.png',
+      '/images/mfw/mfw3.png',
+      '/images/mfw/mfw4.png',
+      '/images/mfw/mfw5.png',
+      '/images/mfw/mfw6.png',
+      '/images/mfw/mfw7.png',
+      '/images/mfw/mfw8.png',
     ],
   },
   2: {
@@ -28,12 +28,11 @@ const cameraProjects = {
       'Photographic coverage produced during two days of CLEC Fashion Festival 2025, capturing runway shows, designers, and the creative atmosphere of the event.',
     date: '21 de octubre de 2025.',
     slides: [
-      '/images/clec/DSC02610.JPG',
-      '/images/clec/DSC02642.JPG',
-      '/images/clec/DSC02651.JPG',
-      '/images/clec/DSC02673.JPG',
-      '/images/clec/DSC02703.JPG',
-      '/images/clec/DSC02713.JPG',
+      '/images/clec/clec2.png',
+      '/images/clec/clec3.png',
+      '/images/clec/clec4.png',
+      '/images/clec/clec5.png',
+      '/images/clec/clec6.png',
     ],
   },
   3: {
@@ -59,13 +58,13 @@ const cameraProjects = {
       '/images/otros/1f1bacd3-1e9c-4c87-ab3b-26edf662048d.jpg',
       '/images/otros/2eacb691-6e24-4d3d-96e3-0133ec08c9a2.jpg',
       '/images/otros/797d1aa1-da9c-4c0c-bd4a-0bf16343b398.jpg',
-      '/images/otros/DSCN1561.JPG',
-      '/images/otros/DSCN1572.JPG',
       '/images/otros/IMG_7661.JPG',
       '/images/otros/IMG_7695.JPG',
       '/images/otros/IMG_7776.JPG',
       '/images/otros/IMG_7847.JPG',
       '/images/otros/acfa47db-7fda-445b-83f9-e9589a2697d1.jpg',
+      '/images/otros/lugar1.png',
+      '/images/otros/lugar2.png',
     ],
   },
 } as const
@@ -195,7 +194,9 @@ onBeforeUnmount(() => {
               <span aria-hidden="true">&#8250;</span>
             </button>
           </div>
-          <p class="photo-description">{{ activeProject.description }}</p>
+          <div class="photo-detail-bar">
+            <p class="photo-detail-copy">{{ activeProject.description }}</p>
+          </div>
         </div>
       </div>
     </section>
@@ -346,6 +347,24 @@ onBeforeUnmount(() => {
   line-height: 1.3;
 }
 
+.photo-detail-bar {
+  margin: 0.95rem var(--carousel-side-offset) 0;
+  max-width: min(44ch, 48%);
+  min-height: 122px;
+  padding: 0.7rem 0.8rem;
+  background: #fff;
+  border: 1px solid #f8f5ef;
+  border-radius: 18px;
+}
+
+.photo-detail-copy {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: oblique;
+  font-size: 0.72rem;
+  line-height: 1.3;
+}
+
 @media (max-width: 920px) {
   .photography-empty {
     min-height: 130vh;
@@ -377,6 +396,15 @@ onBeforeUnmount(() => {
     max-width: min(60ch, 100%);
     padding: 0;
     margin-top: 0.6rem;
+  }
+
+  .photo-detail-bar {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.65rem;
+    max-width: min(52ch, 100%);
+    min-height: 96px;
+    border-radius: 16px;
   }
 
   .photo-title {

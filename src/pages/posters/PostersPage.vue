@@ -17,12 +17,7 @@ const posters = [
       <h1 class="archive-title">posters archive</h1>
 
       <div class="posters-masonry">
-        <figure
-          v-for="(poster, index) in posters"
-          :key="`${poster}-${index}`"
-          class="poster-item"
-          :class="{ 'is-fish': poster.includes('peces') }"
-        >
+        <figure v-for="(poster, index) in posters" :key="`${poster}-${index}`" class="poster-item">
           <img :src="poster" :alt="`Poster ${index + 1}`" loading="lazy" />
         </figure>
       </div>
@@ -35,7 +30,7 @@ const posters = [
   min-height: calc(100vh - 73px);
   width: 100%;
   background-color: #f3f1eb;
-  padding: 2rem 1.2rem 3.5rem;
+  padding: 2rem 1.2rem 1.8rem;
   box-sizing: border-box;
 }
 
@@ -73,10 +68,6 @@ const posters = [
   display: block;
 }
 
-.poster-item.is-fish {
-  grid-column: span 1;
-}
-
 @media (max-width: 900px) {
   .posters-page {
     padding-top: 1.5rem;
@@ -85,19 +76,11 @@ const posters = [
   .posters-masonry {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
-  .poster-item.is-fish {
-    grid-column: span 1;
-  }
 }
 
 @media (max-width: 560px) {
   .posters-masonry {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .poster-item.is-fish {
-    grid-column: span 1;
   }
 }
 </style>

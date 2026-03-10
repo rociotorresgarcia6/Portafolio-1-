@@ -201,7 +201,9 @@ onBeforeUnmount(() => {
               <span aria-hidden="true">&#8250;</span>
             </button>
           </div>
-          <p class="photo-description">{{ activeProject.description }}</p>
+          <div class="photo-detail-bar">
+            <p class="photo-detail-copy">{{ activeProject.description }}</p>
+          </div>
         </div>
       </div>
     </section>
@@ -362,6 +364,24 @@ onBeforeUnmount(() => {
   line-height: 1.3;
 }
 
+.photo-detail-bar {
+  margin: 0.95rem calc(var(--carousel-side-offset) + 1.4rem) 0;
+  max-width: min(44ch, 48%);
+  min-height: 122px;
+  padding: 0.7rem 0.8rem;
+  background: #fff;
+  border: 1px solid #f8f5ef;
+  border-radius: 18px;
+}
+
+.photo-detail-copy {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: oblique;
+  font-size: 0.72rem;
+  line-height: 1.3;
+}
+
 @media (max-width: 920px) {
   .photography-empty {
     min-height: 130vh;
@@ -393,6 +413,15 @@ onBeforeUnmount(() => {
     max-width: min(60ch, 100%);
     padding: 0;
     margin-top: 0.6rem;
+  }
+
+  .photo-detail-bar {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.65rem;
+    max-width: min(52ch, 100%);
+    min-height: 96px;
+    border-radius: 16px;
   }
 
   .photo-title {
