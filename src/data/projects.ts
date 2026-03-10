@@ -66,7 +66,7 @@ export const projects: ProjectItem[] = [
     year: '2025',
     tool: 'Canon + Photoshop + Lightroom',
     summary: "Runway photo session for MFW '25 in Valencia.",
-    image: '/images/mfw/mfw4.png',
+    image: '/images/mfw/mfw9.png',
     featured: true,
   },
   {
@@ -105,7 +105,7 @@ export const projects: ProjectItem[] = [
     year: '2026',
     tool: 'Illustrator + InDesign + Photoshop',
     summary: 'Visual identity and posters for the 1st Ibero-American Congress of Digital Creation and Fabrication.',
-    image: '/images/crefad/WhatsApp Image 2025-11-24 at 19.10.22.jpeg',
+    image: '/images/crefad/WhatsApp Image 2025-11-24 at 19.10.51.jpeg',
     featured: true,
   },
   {
